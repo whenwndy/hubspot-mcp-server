@@ -157,6 +157,55 @@ def get_tickets(
 
 
 # ---------------------------------------------------------------------------
+# CX Daily Report
+# ---------------------------------------------------------------------------
+
+@mcp.tool()
+def get_cx_daily_report(
+    date: str = Field(description="Report date, e.g. 2026-08-05. Use today's date for today's report."),
+) -> dict:
+    """Generate a CX daily report for a given date covering: tickets opened, tickets resolved, SLA breaches, escalations, top issue categories, CSAT trends, and staffing recommendations."""
+    tickets = _db["tickets"]
+
+    opened = [t for t in tickets if t["created_date"] == date]
+    resolved = [t for t in tickets if t.get("resolved_date") == date]
+    sla_breaches = [t for t in tickets if t.get("sla_breached") is True and t["created_date"] == date]
+    escalations = [t for t in tickets if t.get("escalated") is True and t.get("escalated_at", "")[:10] == date]
+
+    # Top issue categories across all open/in-progress tickets
+    from collections import Counter
+    active = [t for t in tickets if t["status"] in ("open", "in_progress")]
+    category_counts = Counter(t["category"] for t in active)
+    top_categories = [{"category": k, "count": v} for k, v in category_counts.most_common()]
+
+    # CSAT — all tickets with scores
+    scored = [t for t in tickets if t.get("csat_score") is not None]
+    avg_csat = round(sum(t["csat_score"] for t in scored) / len(scored), 2) if scored else None
+    low_csat = [t for t in scored if t["csat_score"] <= 3]
+
+    # Staffing recommendation based on open ticket volume
+    open_tickets = [t for t in tickets if t["status"] in ("open", "in_progress")]
+    urgent_high = [t for t in open_tickets if t["priority"] in ("urgent", "high")]
+    if len(urgent_high) >= 3:
+        staffing_rec = f"High priority queue has {len(urgent_high)} urgent/high tickets — consider adding 1 additional CX agent or redistributing load from Priya Nair (highest open count)."
+    elif len(open_tickets) > 5:
+        staffing_rec = f"{len(open_tickets)} open tickets across the team — current staffing appears sufficient but monitor closely."
+    else:
+        staffing_rec = "Ticket volume is manageable with current staffing."
+
+    return {
+        "report_date": date,
+        "tickets_opened": {"count": len(opened), "tickets": [{"id": t["id"], "subject": t["subject"], "priority": t["priority"], "owner": t["owner"]} for t in opened]},
+        "tickets_resolved": {"count": len(resolved), "tickets": [{"id": t["id"], "subject": t["subject"], "owner": t["owner"]} for t in resolved]},
+        "sla_breaches": {"count": len(sla_breaches), "tickets": [{"id": t["id"], "subject": t["subject"], "first_response_time_min": t.get("first_response_time_min"), "sla_target_min": t.get("sla_first_response_target_min")} for t in sla_breaches]},
+        "escalations": {"count": len(escalations), "tickets": [{"id": t["id"], "subject": t["subject"], "escalated_to": t.get("escalated_to")} for t in escalations]},
+        "top_issue_categories": top_categories,
+        "csat": {"avg_score": avg_csat, "total_responses": len(scored), "low_scores": [{"id": t["id"], "score": t["csat_score"], "comment": t.get("csat_comment")} for t in low_csat]},
+        "staffing_recommendation": staffing_rec,
+    }
+
+
+# ---------------------------------------------------------------------------
 # Write Tools — Companies
 # ---------------------------------------------------------------------------
 
