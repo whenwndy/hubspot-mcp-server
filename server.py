@@ -357,9 +357,9 @@ def update_deal(
 def create_ticket(
     subject: str = Field(description="Ticket subject"),
     company_id: str = Field(description="Company ID, e.g. CMP-001"),
-    contact_id: Optional[str] = Field(default=None, description="Contact ID, e.g. CON-001"),
     category: str = Field(description="order_issue | billing | delivery | product_quality | account | compliance"),
     priority: str = Field(default="medium", description="low | medium | high | urgent"),
+    contact_id: Optional[str] = Field(default=None, description="Contact ID, e.g. CON-001"),
     description: Optional[str] = Field(default=None, description="Ticket description"),
     owner: Optional[str] = Field(default=None, description="Assigned CX owner"),
 ) -> dict:
