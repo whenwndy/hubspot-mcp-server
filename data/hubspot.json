@@ -1,776 +1,650 @@
 {
-  "companies": [
+  "agents": [
     {
-      "id": "CMP-001",
-      "name": "Harborside",
-      "city": "Oakland",
-      "state": "CA",
-      "industry": "Cannabis Retail",
-      "lifecycle_stage": "customer",
-      "annual_revenue_usd": 18500000,
-      "employee_count": 85,
-      "account_manager": "Sofia Reyes",
-      "created_date": "2022-03-14",
-      "last_activity_date": "2026-07-28",
-      "website": "https://harborside.com",
-      "phone": "510-555-0142",
-      "tags": ["vip", "net30", "multi-location"]
+      "email": "m.chen@evivebrands.example.com",
+      "id": "AG01",
+      "name": "Maya Chen",
+      "open_ticket_count": 3,
+      "role": "Senior Franchise Support Manager",
+      "ticket_ids": [
+        "TK001",
+        "TK003",
+        "TK009"
+      ]
     },
     {
-      "id": "CMP-002",
-      "name": "MedMen Los Angeles",
-      "city": "Los Angeles",
-      "state": "CA",
-      "industry": "Cannabis Retail",
-      "lifecycle_stage": "customer",
-      "annual_revenue_usd": 32000000,
-      "employee_count": 210,
-      "account_manager": "Jordan Kim",
-      "created_date": "2021-11-02",
-      "last_activity_date": "2026-08-01",
-      "website": "https://medmen.com",
-      "phone": "323-555-0178",
-      "tags": ["vip", "net60", "multi-location", "high-volume"]
+      "email": "j.brooks@evivebrands.example.com",
+      "id": "AG02",
+      "name": "Jordan Brooks",
+      "open_ticket_count": 3,
+      "role": "Franchise Support Specialist",
+      "ticket_ids": [
+        "TK002",
+        "TK006",
+        "TK010"
+      ]
     },
     {
-      "id": "CMP-003",
-      "name": "Flower Power Collective",
-      "city": "San Francisco",
-      "state": "CA",
-      "industry": "Cannabis Retail",
-      "lifecycle_stage": "customer",
-      "annual_revenue_usd": 4200000,
-      "employee_count": 22,
-      "account_manager": "Sofia Reyes",
-      "created_date": "2023-01-19",
-      "last_activity_date": "2026-07-15",
-      "website": "https://flowerpowercollective.com",
-      "phone": "415-555-0231",
-      "tags": ["net30", "boutique"]
+      "email": "e.martinez@evivebrands.example.com",
+      "id": "AG03",
+      "name": "Elena Martinez",
+      "open_ticket_count": 2,
+      "role": "Customer & Care Support Specialist",
+      "ticket_ids": [
+        "TK004",
+        "TK007"
+      ]
     },
     {
-      "id": "CMP-004",
-      "name": "The Cannabist San Diego",
-      "city": "San Diego",
-      "state": "CA",
-      "industry": "Cannabis Retail",
-      "lifecycle_stage": "customer",
-      "annual_revenue_usd": 9800000,
-      "employee_count": 48,
-      "account_manager": "Jordan Kim",
-      "created_date": "2022-08-07",
-      "last_activity_date": "2026-07-30",
-      "website": "https://thecannabist.co",
-      "phone": "619-555-0389",
-      "tags": ["net30", "multi-location"]
+      "email": "m.reed@evivebrands.example.com",
+      "id": "AG04",
+      "name": "Marcus Reed",
+      "open_ticket_count": 1,
+      "role": "Home Services Support Lead",
+      "ticket_ids": [
+        "TK005"
+      ]
     },
     {
-      "id": "CMP-005",
-      "name": "Gold Rush Dispensary",
-      "city": "Sacramento",
-      "state": "CA",
-      "industry": "Cannabis Retail",
-      "lifecycle_stage": "opportunity",
-      "annual_revenue_usd": 3100000,
-      "employee_count": 18,
-      "account_manager": "Priya Nair",
-      "created_date": "2026-04-22",
-      "last_activity_date": "2026-07-18",
-      "website": "https://goldrushdispensary.com",
-      "phone": "916-555-0517",
-      "tags": ["new-account", "high-potential"]
-    },
-    {
-      "id": "CMP-006",
-      "name": "Valley Green Fresno",
-      "city": "Fresno",
-      "state": "CA",
-      "industry": "Cannabis Retail",
-      "lifecycle_stage": "lead",
-      "annual_revenue_usd": 1800000,
-      "employee_count": 12,
-      "account_manager": "Priya Nair",
-      "created_date": "2026-06-10",
-      "last_activity_date": "2026-07-25",
-      "website": "https://valleygreenfresno.com",
-      "phone": "559-555-0604",
-      "tags": ["new-lead", "price-sensitive"]
-    },
-    {
-      "id": "CMP-007",
-      "name": "Pacific Releaf",
-      "city": "Long Beach",
-      "state": "CA",
-      "industry": "Cannabis Retail",
-      "lifecycle_stage": "customer",
-      "annual_revenue_usd": 6700000,
-      "employee_count": 34,
-      "account_manager": "Jordan Kim",
-      "created_date": "2022-12-01",
-      "last_activity_date": "2026-08-02",
-      "website": "https://pacificreleaf.com",
-      "phone": "562-555-0733",
-      "tags": ["net30", "delivery-only"]
-    },
-    {
-      "id": "CMP-008",
-      "name": "OC Wellness Collective",
-      "city": "Santa Ana",
-      "state": "CA",
-      "industry": "Cannabis Retail",
-      "lifecycle_stage": "lead",
-      "annual_revenue_usd": 2400000,
-      "employee_count": 15,
-      "account_manager": "Sofia Reyes",
-      "created_date": "2026-07-01",
-      "last_activity_date": "2026-07-29",
-      "website": "https://ocwellnesscollective.com",
-      "phone": "714-555-0891",
-      "tags": ["new-lead", "referral"]
+      "email": "p.shah@evivebrands.example.com",
+      "id": "AG05",
+      "name": "Priya Shah",
+      "open_ticket_count": 1,
+      "role": "Systems & Integrations Specialist",
+      "ticket_ids": [
+        "TK008"
+      ]
     }
   ],
   "contacts": [
     {
-      "id": "CON-001",
-      "company_id": "CMP-001",
-      "first_name": "Marcus",
-      "last_name": "Torres",
-      "email": "marcus.torres@harborside.com",
-      "phone": "510-555-0143",
-      "job_title": "Head Buyer",
-      "lifecycle_stage": "customer",
-      "created_date": "2022-03-14",
-      "last_contacted_date": "2026-07-28",
-      "preferred_contact_method": "email",
-      "notes": "Prefers Tuesday/Thursday for calls. Focused on premium flower and vape. Key decision-maker for all POs over $5k."
+      "company": "Executive Home Care - Scottsdale",
+      "email": "sarah.mitchell@franchise.example.com",
+      "first_name": "Sarah",
+      "id": "CT01",
+      "last_name": "Mitchell",
+      "phone": "+1-480-555-0192",
+      "ticket_ids": [
+        "TK001",
+        "TK006"
+      ]
     },
     {
-      "id": "CON-002",
-      "company_id": "CMP-001",
-      "first_name": "Diana",
-      "last_name": "Weiss",
-      "email": "diana.weiss@harborside.com",
-      "phone": "510-555-0144",
-      "job_title": "Purchasing Manager",
-      "lifecycle_stage": "customer",
-      "created_date": "2023-05-08",
-      "last_contacted_date": "2026-07-20",
-      "preferred_contact_method": "phone",
-      "notes": "Handles day-to-day reorders and substitution approvals. CC on all invoice disputes."
+      "company": "The Brothers That Just Do Gutters - Denver",
+      "email": "daniel.kim@franchise.example.com",
+      "first_name": "Daniel",
+      "id": "CT02",
+      "last_name": "Kim",
+      "phone": "+1-720-555-0847",
+      "ticket_ids": [
+        "TK002"
+      ]
     },
     {
-      "id": "CON-003",
-      "company_id": "CMP-002",
-      "first_name": "Brandon",
-      "last_name": "Okafor",
-      "email": "brandon.okafor@medmen.com",
-      "phone": "323-555-0179",
-      "job_title": "VP of Purchasing",
-      "lifecycle_stage": "customer",
-      "created_date": "2021-11-02",
-      "last_contacted_date": "2026-08-01",
-      "preferred_contact_method": "email",
-      "notes": "Corporate buyer for all CA locations. Requires 14-day lead time on all new SKUs. Escalation point for compliance issues."
-    },
-    {
-      "id": "CON-004",
-      "company_id": "CMP-002",
-      "first_name": "Tina",
-      "last_name": "Castillo",
-      "email": "tina.castillo@medmen.com",
-      "phone": "323-555-0190",
-      "job_title": "Purchasing Manager",
-      "lifecycle_stage": "customer",
-      "created_date": "2022-06-15",
-      "last_contacted_date": "2026-07-29",
-      "preferred_contact_method": "text",
-      "notes": "Manages individual store reorders for LA region. Prefers text for quick questions."
-    },
-    {
-      "id": "CON-005",
-      "company_id": "CMP-003",
-      "first_name": "Yuki",
-      "last_name": "Nakamura",
-      "email": "yuki@flowerpowercollective.com",
-      "phone": "415-555-0232",
-      "job_title": "Owner",
-      "lifecycle_stage": "customer",
-      "created_date": "2023-01-19",
-      "last_contacted_date": "2026-07-15",
-      "preferred_contact_method": "email",
-      "notes": "Owner-operator. Very selective about brands — leans toward craft and sustainable products. Pays net30 consistently."
-    },
-    {
-      "id": "CON-006",
-      "company_id": "CMP-004",
-      "first_name": "Carlos",
-      "last_name": "Mendez",
-      "email": "c.mendez@thecannabist.co",
-      "phone": "619-555-0390",
-      "job_title": "General Manager",
-      "lifecycle_stage": "customer",
-      "created_date": "2022-08-07",
-      "last_contacted_date": "2026-07-30",
-      "preferred_contact_method": "phone",
-      "notes": "GM overseeing purchasing across two SD locations. Interested in expanding edibles and concentrates SKUs."
-    },
-    {
-      "id": "CON-007",
-      "company_id": "CMP-005",
-      "first_name": "Amber",
-      "last_name": "Liu",
-      "email": "amber.liu@goldrushdispensary.com",
-      "phone": "916-555-0518",
-      "job_title": "Head Buyer",
-      "lifecycle_stage": "lead",
-      "created_date": "2026-04-22",
-      "last_contacted_date": "2026-07-18",
-      "preferred_contact_method": "email",
-      "notes": "Evaluating Nabis vs. direct brand relationships. Sent product catalog and pricing sheet in July. Follow up after Q3."
-    },
-    {
-      "id": "CON-008",
-      "company_id": "CMP-006",
-      "first_name": "Devon",
-      "last_name": "Hargrove",
-      "email": "devon@valleygreenfresno.com",
-      "phone": "559-555-0605",
-      "job_title": "Owner",
-      "lifecycle_stage": "lead",
-      "created_date": "2026-06-10",
-      "last_contacted_date": "2026-07-25",
-      "preferred_contact_method": "phone",
-      "notes": "Interested but price-sensitive. Currently buying direct from 2-3 brands. Needs to see ROI on Nabis platform before committing."
-    },
-    {
-      "id": "CON-009",
-      "company_id": "CMP-007",
-      "first_name": "Rachel",
-      "last_name": "Dominguez",
-      "email": "rachel.d@pacificreleaf.com",
-      "phone": "562-555-0734",
-      "job_title": "Purchasing Manager",
-      "lifecycle_stage": "customer",
-      "created_date": "2022-12-01",
-      "last_contacted_date": "2026-08-02",
-      "preferred_contact_method": "text",
-      "notes": "Delivery-only model — very focused on product availability and next-day fulfillment. Escalates quickly if out-of-stock."
-    },
-    {
-      "id": "CON-010",
-      "company_id": "CMP-008",
-      "first_name": "James",
-      "last_name": "Patel",
-      "email": "james.patel@ocwellnesscollective.com",
-      "phone": "714-555-0892",
-      "job_title": "General Manager",
-      "lifecycle_stage": "lead",
-      "created_date": "2026-07-01",
-      "last_contacted_date": "2026-07-29",
-      "preferred_contact_method": "email",
-      "notes": "Referral from Harborside. New store opened June 2026. Looking to build initial brand portfolio through Nabis."
-    },
-    {
-      "id": "CON-011",
-      "company_id": "CMP-004",
+      "company": "Maid Brigade - Atlanta",
+      "email": "nicole.bennett@franchise.example.com",
       "first_name": "Nicole",
-      "last_name": "Park",
-      "email": "n.park@thecannabist.co",
-      "phone": "619-555-0401",
-      "job_title": "Purchasing Manager",
-      "lifecycle_stage": "customer",
-      "created_date": "2024-02-14",
-      "last_contacted_date": "2026-07-22",
-      "preferred_contact_method": "email",
-      "notes": "Handles Mission Valley location specifically. Strong preference for indica-dominant SKUs and house brand promotions."
+      "id": "CT03",
+      "last_name": "Bennett",
+      "phone": "+1-404-555-0321",
+      "ticket_ids": [
+        "TK003"
+      ]
     },
     {
-      "id": "CON-012",
-      "company_id": "CMP-002",
-      "first_name": "Eric",
-      "last_name": "Washington",
-      "email": "e.washington@medmen.com",
-      "phone": "323-555-0201",
-      "job_title": "Purchasing Manager",
-      "lifecycle_stage": "customer",
-      "created_date": "2023-09-05",
-      "last_contacted_date": "2026-07-31",
-      "preferred_contact_method": "email",
-      "notes": "Handles West Hollywood and Beverly Hills locations. Focused on premium and luxury product positioning."
+      "company": "Assisted Living Locators - Phoenix",
+      "email": "rachel.foster@franchise.example.com",
+      "first_name": "Rachel",
+      "id": "CT04",
+      "last_name": "Foster",
+      "phone": "+1-602-555-0774",
+      "ticket_ids": [
+        "TK004"
+      ]
+    },
+    {
+      "company": "Shine - Charlotte",
+      "email": "chris.walker@franchise.example.com",
+      "first_name": "Chris",
+      "id": "CT05",
+      "last_name": "Walker",
+      "phone": "+1-704-555-0936",
+      "ticket_ids": [
+        "TK005"
+      ]
+    },
+    {
+      "company": "Grasons - Orange County",
+      "email": "amanda.lopez@franchise.example.com",
+      "first_name": "Amanda",
+      "id": "CT06",
+      "last_name": "Lopez",
+      "phone": "+1-949-555-0183",
+      "ticket_ids": [
+        "TK007"
+      ]
+    },
+    {
+      "company": "Pacific Lawn Sprinklers - Long Island",
+      "email": "tyler.morgan@franchise.example.com",
+      "first_name": "Tyler",
+      "id": "CT07",
+      "last_name": "Morgan",
+      "phone": "+1-516-555-0462",
+      "ticket_ids": [
+        "TK008"
+      ]
+    },
+    {
+      "company": "Executive Home Care - Tampa",
+      "email": "kevin.patel@franchise.example.com",
+      "first_name": "Kevin",
+      "id": "CT08",
+      "last_name": "Patel",
+      "phone": "+1-813-555-0215",
+      "ticket_ids": [
+        "TK009"
+      ]
+    },
+    {
+      "company": "Maid Brigade - Nashville",
+      "email": "emily.ross@franchise.example.com",
+      "first_name": "Emily",
+      "id": "CT09",
+      "last_name": "Ross",
+      "phone": "+1-615-555-0812",
+      "ticket_ids": [
+        "TK010"
+      ]
     }
   ],
-  "deals": [
+  "knowledge_base_articles": [
     {
-      "id": "DEAL-001",
-      "company_id": "CMP-001",
-      "contact_id": "CON-001",
-      "deal_name": "Harborside Q3 Upsell — Premium Vape Expansion",
-      "stage": "closed_won",
-      "amount_usd": 42000,
-      "close_date": "2026-07-15",
-      "pipeline": "Upsell",
-      "owner": "Sofia Reyes",
-      "created_date": "2026-05-20",
-      "last_activity_date": "2026-07-15",
-      "products": ["Heavy Hitters", "Stiiizy", "Raw Garden"]
+      "author_id": "AG01",
+      "category": "Franchise Operations",
+      "created_at": "2026-05-12T16:00:00Z",
+      "id": "KB01",
+      "status": "published",
+      "summary": "How franchise owners and local operators can access the support portal, reset credentials, and resolve common login issues.",
+      "tags": [
+        "franchise",
+        "portal",
+        "login",
+        "password"
+      ],
+      "title": "Franchise Support Portal: Access and Password Help",
+      "updated_at": "2026-08-05T17:30:00Z"
     },
     {
-      "id": "DEAL-002",
-      "company_id": "CMP-002",
-      "contact_id": "CON-003",
-      "deal_name": "MedMen CA Statewide Flower Program",
-      "stage": "contract_sent",
-      "amount_usd": 185000,
-      "close_date": "2026-08-31",
-      "pipeline": "Upsell",
-      "owner": "Jordan Kim",
-      "created_date": "2026-06-01",
-      "last_activity_date": "2026-08-01",
-      "products": ["Almora", "Lowell Herb Co", "Fig Farms", "Moonman's Mistress"]
+      "author_id": "AG03",
+      "category": "Billing & Royalties",
+      "created_at": "2026-04-20T15:00:00Z",
+      "id": "KB02",
+      "status": "published",
+      "summary": "Explains common royalty and brand fund line items, statement timing, and how franchisees can request a billing review.",
+      "tags": [
+        "royalty",
+        "billing",
+        "brand fund",
+        "statement"
+      ],
+      "title": "Understanding Royalty Statements and Brand Fund Charges",
+      "updated_at": "2026-07-28T18:00:00Z"
     },
     {
-      "id": "DEAL-003",
-      "company_id": "CMP-005",
-      "contact_id": "CON-007",
-      "deal_name": "Gold Rush Dispensary — New Account Onboarding",
-      "stage": "proposal_sent",
-      "amount_usd": 18500,
-      "close_date": "2026-09-15",
-      "pipeline": "New Accounts",
-      "owner": "Priya Nair",
-      "created_date": "2026-05-10",
-      "last_activity_date": "2026-07-18",
-      "products": ["Jetty", "Kiva Confections", "Heavy Hitters"]
+      "author_id": "AG01",
+      "category": "Franchise Operations",
+      "created_at": "2026-06-03T14:00:00Z",
+      "id": "KB03",
+      "status": "published",
+      "summary": "Guidance for submitting local campaigns, required disclaimers, brand standards, and expected approval timelines.",
+      "tags": [
+        "marketing",
+        "brand review",
+        "franchise",
+        "approval"
+      ],
+      "title": "Submitting Local Marketing Materials for Brand Review",
+      "updated_at": "2026-08-10T16:15:00Z"
     },
     {
-      "id": "DEAL-004",
-      "company_id": "CMP-006",
-      "contact_id": "CON-008",
-      "deal_name": "Valley Green Fresno — Initial Account",
-      "stage": "qualification",
-      "amount_usd": 9200,
-      "close_date": "2026-10-01",
-      "pipeline": "New Accounts",
-      "owner": "Priya Nair",
-      "created_date": "2026-06-15",
-      "last_activity_date": "2026-07-25",
-      "products": ["Stiiizy", "Wyld", "Kanha"]
+      "author_id": "AG05",
+      "category": "Integrations",
+      "created_at": "2026-05-18T17:00:00Z",
+      "id": "KB04",
+      "status": "published",
+      "summary": "Troubleshooting guide for franchise leads that are missing, duplicated, or routed to the wrong local territory.",
+      "tags": [
+        "CRM",
+        "lead routing",
+        "territory",
+        "integration"
+      ],
+      "title": "CRM Lead Routing and Territory Assignment Troubleshooting",
+      "updated_at": "2026-08-12T15:00:00Z"
     },
     {
-      "id": "DEAL-005",
-      "company_id": "CMP-008",
-      "contact_id": "CON-010",
-      "deal_name": "OC Wellness Collective — New Account",
-      "stage": "prospecting",
-      "amount_usd": 14000,
-      "close_date": "2026-10-15",
-      "pipeline": "New Accounts",
-      "owner": "Sofia Reyes",
-      "created_date": "2026-07-01",
-      "last_activity_date": "2026-07-29",
-      "products": ["Almora", "Kiva Confections", "Jetty"]
+      "author_id": "AG04",
+      "category": "Home Services Operations",
+      "created_at": "2026-04-08T16:00:00Z",
+      "id": "KB05",
+      "status": "published",
+      "summary": "Steps for resolving online booking, service-area, and local scheduling issues across home-services franchise locations.",
+      "tags": [
+        "scheduling",
+        "service area",
+        "booking",
+        "home services"
+      ],
+      "title": "Handling Scheduling and Service-Area Issues",
+      "updated_at": "2026-08-01T16:00:00Z"
     },
     {
-      "id": "DEAL-006",
-      "company_id": "CMP-003",
-      "contact_id": "CON-005",
-      "deal_name": "Flower Power SF — Edibles Line Expansion",
-      "stage": "closed_won",
-      "amount_usd": 11800,
-      "close_date": "2026-06-30",
-      "pipeline": "Upsell",
-      "owner": "Sofia Reyes",
-      "created_date": "2026-04-10",
-      "last_activity_date": "2026-06-30",
-      "products": ["Kiva Confections", "Wyld", "Camino"]
+      "author_id": "AG05",
+      "category": "Systems & Integrations",
+      "created_at": "2026-05-30T15:00:00Z",
+      "id": "KB06",
+      "status": "published",
+      "summary": "Best practices for keeping location, territory, owner, and contact information synchronized across connected systems.",
+      "tags": [
+        "location data",
+        "sync",
+        "integration",
+        "franchise"
+      ],
+      "title": "Managing Franchise Location Data Across Connected Systems",
+      "updated_at": "2026-08-14T18:00:00Z"
     },
     {
-      "id": "DEAL-007",
-      "company_id": "CMP-004",
-      "contact_id": "CON-006",
-      "deal_name": "The Cannabist SD — Concentrates Expansion",
-      "stage": "proposal_sent",
-      "amount_usd": 27500,
-      "close_date": "2026-08-20",
-      "pipeline": "Upsell",
-      "owner": "Jordan Kim",
-      "created_date": "2026-06-22",
-      "last_activity_date": "2026-07-30",
-      "products": ["Raw Garden", "Jetty", "Stiiizy"]
+      "author_id": "AG01",
+      "category": "Franchise Onboarding",
+      "created_at": "2026-06-15T14:00:00Z",
+      "id": "KB07",
+      "status": "published",
+      "summary": "Checklist covering system access, local listings, marketing readiness, training, and operational milestones before launch.",
+      "tags": [
+        "onboarding",
+        "new location",
+        "launch",
+        "checklist"
+      ],
+      "title": "New Franchise Location Opening Checklist",
+      "updated_at": "2026-08-07T17:00:00Z"
     },
     {
-      "id": "DEAL-008",
-      "company_id": "CMP-007",
-      "contact_id": "CON-009",
-      "deal_name": "Pacific Releaf — Reactivation After Compliance Hold",
-      "stage": "closed_won",
-      "amount_usd": 16200,
-      "close_date": "2026-07-22",
-      "pipeline": "Reactivation",
-      "owner": "Jordan Kim",
-      "created_date": "2026-06-05",
-      "last_activity_date": "2026-07-22",
-      "products": ["Heavy Hitters", "Lowell Herb Co", "Almora"]
-    },
-    {
-      "id": "DEAL-009",
-      "company_id": "CMP-001",
-      "contact_id": "CON-001",
-      "deal_name": "Harborside Q4 Seasonal Program",
-      "stage": "qualification",
-      "amount_usd": 55000,
-      "close_date": "2026-10-31",
-      "pipeline": "Upsell",
-      "owner": "Sofia Reyes",
-      "created_date": "2026-07-25",
-      "last_activity_date": "2026-07-28",
-      "products": ["Fig Farms", "Heavy Hitters", "Camino", "Stiiizy"]
-    },
-    {
-      "id": "DEAL-010",
-      "company_id": "CMP-004",
-      "contact_id": "CON-011",
-      "deal_name": "Cannabist Mission Valley — Reorder Program Upgrade",
-      "stage": "closed_lost",
-      "amount_usd": 8900,
-      "close_date": "2026-07-01",
-      "pipeline": "Upsell",
-      "owner": "Jordan Kim",
-      "created_date": "2026-05-01",
-      "last_activity_date": "2026-07-01",
-      "products": ["Wyld", "Kanha", "Kiva Confections"]
+      "author_id": "AG02",
+      "category": "Franchise Operations",
+      "created_at": "2026-06-22T15:00:00Z",
+      "id": "KB08",
+      "status": "published",
+      "summary": "How franchisees request changes to public-facing hours, service areas, contact details, and location information.",
+      "tags": [
+        "location",
+        "hours",
+        "service area",
+        "franchise"
+      ],
+      "title": "Updating Business Hours, Service Areas, and Location Details",
+      "updated_at": "2026-08-11T17:00:00Z"
     }
   ],
+  "pipelines": [
+    {
+      "id": "PL01",
+      "name": "Franchise & Customer Support",
+      "stages": [
+        {
+          "display_order": 1,
+          "id": "ST01",
+          "name": "New"
+        },
+        {
+          "display_order": 2,
+          "id": "ST02",
+          "name": "In Progress"
+        },
+        {
+          "display_order": 3,
+          "id": "ST03",
+          "name": "Waiting on Franchisee"
+        },
+        {
+          "display_order": 4,
+          "id": "ST04",
+          "name": "Resolved"
+        },
+        {
+          "display_order": 5,
+          "id": "ST99",
+          "name": "Closed"
+        }
+      ]
+    },
+    {
+      "id": "PL02",
+      "name": "Franchise Onboarding & Success",
+      "stages": [
+        {
+          "display_order": 1,
+          "id": "ST05",
+          "name": "New Request"
+        },
+        {
+          "display_order": 2,
+          "id": "ST06",
+          "name": "In Review"
+        },
+        {
+          "display_order": 3,
+          "id": "ST07",
+          "name": "Completed"
+        },
+        {
+          "display_order": 4,
+          "id": "ST08",
+          "name": "Closed"
+        }
+      ]
+    }
+  ],
+  "sla_policies": [
+    {
+      "close_actual_hrs": null,
+      "close_met": null,
+      "close_target_hrs": 8,
+      "first_response_actual_hrs": 0.6,
+      "first_response_met": true,
+      "first_response_target_hrs": 1,
+      "policy_name": "High Priority Franchise SLA",
+      "status": "at_risk",
+      "ticket_id": "TK001"
+    },
+    {
+      "close_actual_hrs": null,
+      "close_met": null,
+      "close_target_hrs": 24,
+      "first_response_actual_hrs": 1.2,
+      "first_response_met": true,
+      "first_response_target_hrs": 4,
+      "policy_name": "Medium Priority Franchise SLA",
+      "status": "on_track",
+      "ticket_id": "TK002"
+    },
+    {
+      "close_actual_hrs": null,
+      "close_met": null,
+      "close_target_hrs": 8,
+      "first_response_actual_hrs": 0.9,
+      "first_response_met": true,
+      "first_response_target_hrs": 1,
+      "policy_name": "High Priority Franchise SLA",
+      "status": "at_risk",
+      "ticket_id": "TK003"
+    },
+    {
+      "close_actual_hrs": null,
+      "close_met": null,
+      "close_target_hrs": 4,
+      "first_response_actual_hrs": 0.4,
+      "first_response_met": true,
+      "first_response_target_hrs": 0.5,
+      "policy_name": "Urgent Service Disruption SLA",
+      "status": "at_risk",
+      "ticket_id": "TK005"
+    },
+    {
+      "close_actual_hrs": 21.0,
+      "close_met": true,
+      "close_target_hrs": 72,
+      "first_response_actual_hrs": 2.4,
+      "first_response_met": true,
+      "first_response_target_hrs": 8,
+      "policy_name": "Low Priority Franchise SLA",
+      "status": "met",
+      "ticket_id": "TK007"
+    }
+  ],
+  "support_metrics": {
+    "avg_first_response_hrs": 1.4,
+    "avg_resolution_hrs": 18.7,
+    "closed_tickets": 22,
+    "csat_avg_score": 4.6,
+    "csat_responses": 58,
+    "open_tickets": 17,
+    "period": "2026-08-01 to 2026-08-18",
+    "resolved_tickets": 96,
+    "sla_compliance_pct": 92.4,
+    "top_categories": [
+      {
+        "category": "Franchise Operations",
+        "count": 31
+      },
+      {
+        "category": "Lead Routing & Integrations",
+        "count": 24
+      },
+      {
+        "category": "Billing & Royalties",
+        "count": 18
+      },
+      {
+        "category": "Marketing & Brand Support",
+        "count": 15
+      },
+      {
+        "category": "Location & Service Area Updates",
+        "count": 13
+      }
+    ],
+    "total_tickets": 118
+  },
   "tickets": [
     {
-      "id": "TKT-001",
-      "company_id": "CMP-002",
-      "contact_id": "CON-004",
-      "subject": "Short shipment on PO #MED-7821 — missing 24 units Heavy Hitters",
-      "category": "order_issue",
+      "contact_id": "CT01",
+      "created_at": "2026-08-17T15:22:00Z",
+      "description": "The Executive Home Care location recently changed ownership. The new operator can receive the activation email, but the portal still maps the account to the prior owner.",
+      "id": "TK001",
+      "notes": [
+        {
+          "note_id": "N001",
+          "author_id": "AG01",
+          "body": "Confirmed ownership transition documentation is on file. Systems team is updating the location-to-owner mapping; franchisee is operational but portal access remains blocked.",
+          "created_at": "2026-08-18T15:10:00Z"
+        }
+      ],
+      "owner_id": "AG01",
+      "pipeline_id": "PL01",
       "priority": "high",
-      "status": "resolved",
-      "created_date": "2026-07-14",
-      "resolved_date": "2026-07-17",
-      "owner": "Jordan Kim",
-      "description": "MedMen WeHo location received PO #MED-7821 with 24 units of Heavy Hitters 1g vape missing from the shipment.",
-      "resolution": "Credit memo issued for 24 units ($528). Replacement units added to next delivery.",
-      "sla_first_response_target_min": 60,
-      "first_response_time_min": 45,
-      "sla_breached": false,
-      "escalated": false,
-      "escalated_to": null,
-      "escalated_at": null,
-      "csat_score": 4,
-      "csat_comment": "Fast response, happy with credit memo."
+      "stage_id": "ST01",
+      "status": "open",
+      "subject": "Franchise support portal access blocked after owner change",
+      "updated_at": "2026-08-18T15:10:00Z"
     },
     {
-      "id": "TKT-002",
-      "company_id": "CMP-007",
-      "contact_id": "CON-009",
-      "subject": "Account placed on compliance hold — pending DCC license renewal",
-      "category": "compliance",
+      "contact_id": "CT02",
+      "created_at": "2026-08-15T17:05:00Z",
+      "description": "Franchisee is asking for clarification on a July marketing/brand fund line item that differs from the amount they expected.",
+      "id": "TK002",
+      "notes": [
+        {
+          "note_id": "N002",
+          "author_id": "AG02",
+          "body": "Sent statement breakdown and requested confirmation of the local revenue figure used for the calculation.",
+          "created_at": "2026-08-18T14:30:00Z"
+        }
+      ],
+      "owner_id": "AG02",
+      "pipeline_id": "PL01",
+      "priority": "medium",
+      "stage_id": "ST02",
+      "status": "open",
+      "subject": "Question about July brand fund charge",
+      "updated_at": "2026-08-18T14:30:00Z"
+    },
+    {
+      "contact_id": "CT03",
+      "created_at": "2026-08-16T19:00:00Z",
+      "description": "Maid Brigade franchisee submitted a back-to-school cleaning promotion that is scheduled to launch this week and needs final brand approval.",
+      "id": "TK003",
+      "notes": [
+        {
+          "note_id": "N003",
+          "author_id": "AG01",
+          "body": "Marketing reviewed creative. One disclaimer and CTA update required; revised asset expected from franchisee today.",
+          "created_at": "2026-08-18T16:45:00Z"
+        }
+      ],
+      "owner_id": "AG01",
+      "pipeline_id": "PL01",
+      "priority": "high",
+      "stage_id": "ST02",
+      "status": "pending",
+      "subject": "Local campaign awaiting brand approval before launch",
+      "updated_at": "2026-08-18T16:45:00Z"
+    },
+    {
+      "contact_id": "CT04",
+      "created_at": "2026-08-18T14:15:00Z",
+      "description": "Assisted Living Locators franchise owner hired a new advisor and needs access to location resources and lead notifications.",
+      "id": "TK004",
+      "notes": [],
+      "owner_id": "AG03",
+      "pipeline_id": "PL02",
+      "priority": "low",
+      "stage_id": "ST05",
+      "status": "open",
+      "subject": "Add new advisor to location account",
+      "updated_at": "2026-08-18T14:15:00Z"
+    },
+    {
+      "contact_id": "CT05",
+      "created_at": "2026-08-18T12:50:00Z",
+      "description": "Shine franchisee reports that website booking requests are being submitted successfully but have not appeared in the local queue since yesterday afternoon.",
+      "id": "TK005",
+      "notes": [
+        {
+          "note_id": "N004",
+          "author_id": "AG04",
+          "body": "Issue reproduced. Requests are being captured centrally but failing territory routing for this location. Escalated to integrations as urgent.",
+          "created_at": "2026-08-18T16:20:00Z"
+        }
+      ],
+      "owner_id": "AG04",
+      "pipeline_id": "PL01",
       "priority": "urgent",
+      "stage_id": "ST01",
+      "status": "open",
+      "subject": "Online booking requests not reaching Charlotte location",
+      "updated_at": "2026-08-18T16:20:00Z"
+    },
+    {
+      "contact_id": "CT01",
+      "created_at": "2026-08-14T18:00:00Z",
+      "description": "Executive Home Care franchisee reports several web inquiries are visible in the CRM but notification emails are not reaching the local team.",
+      "id": "TK006",
+      "notes": [
+        {
+          "note_id": "N005",
+          "author_id": "AG02",
+          "body": "Lead records are present and assigned correctly. Checking notification workflow and recipient configuration.",
+          "created_at": "2026-08-17T21:20:00Z"
+        }
+      ],
+      "owner_id": "AG02",
+      "pipeline_id": "PL01",
+      "priority": "medium",
+      "stage_id": "ST02",
+      "status": "pending",
+      "subject": "Lead notifications missing for new service inquiries",
+      "updated_at": "2026-08-17T21:20:00Z"
+    },
+    {
+      "contact_id": "CT06",
+      "created_at": "2026-08-11T20:00:00Z",
+      "description": "Grasons franchisee requested an update to the public phone number and primary contact shown for the territory.",
+      "id": "TK007",
+      "notes": [
+        {
+          "note_id": "N006",
+          "author_id": "AG03",
+          "body": "Contact details updated and franchisee confirmed the change is live.",
+          "created_at": "2026-08-12T17:00:00Z"
+        }
+      ],
+      "owner_id": "AG03",
+      "pipeline_id": "PL01",
+      "priority": "low",
+      "stage_id": "ST04",
       "status": "resolved",
-      "created_date": "2026-06-02",
-      "resolved_date": "2026-06-28",
-      "owner": "Priya Nair",
-      "description": "Pacific Releaf's DCC annual license renewal lapsed. All outbound shipments suspended.",
-      "resolution": "License renewed and verified 6/28. Account reactivated, held orders released.",
-      "sla_first_response_target_min": 30,
-      "first_response_time_min": 28,
-      "sla_breached": false,
-      "escalated": true,
-      "escalated_to": "Compliance Team",
-      "escalated_at": "2026-06-02",
+      "subject": "Request to update estate sale location contact details",
+      "updated_at": "2026-08-12T17:00:00Z",
       "csat_score": 5,
-      "csat_comment": "Handled quickly given the complexity."
+      "csat_sent": true
     },
     {
-      "id": "TKT-003",
-      "company_id": "CMP-001",
-      "contact_id": "CON-002",
-      "subject": "Invoice dispute — INV-4492 billed at wrong tier pricing",
-      "category": "billing",
-      "priority": "medium",
-      "status": "resolved",
-      "created_date": "2026-07-08",
-      "resolved_date": "2026-07-12",
-      "owner": "Sofia Reyes",
-      "description": "Harborside invoiced at standard pricing on INV-4492. VIP tier discount not applied — overcharge of $318.",
-      "resolution": "Credit memo CM-0219 issued for $318. Pricing tier corrected.",
-      "sla_first_response_target_min": 60,
-      "first_response_time_min": 95,
-      "sla_breached": true,
-      "escalated": false,
-      "escalated_to": null,
-      "escalated_at": null,
-      "csat_score": 3,
-      "csat_comment": "Took too long to respond initially but resolved correctly."
+      "contact_id": "CT07",
+      "created_at": "2026-08-18T13:30:00Z",
+      "description": "Pacific Lawn Sprinklers added a territory expansion, but the updated service area is not yet recognized by the connected lead-routing workflow.",
+      "id": "TK008",
+      "notes": [
+        {
+          "note_id": "N007",
+          "author_id": "AG05",
+          "body": "Territory exists in the source system but downstream sync has not completed. Investigating mapping and sync job status.",
+          "created_at": "2026-08-18T15:55:00Z"
+        }
+      ],
+      "owner_id": "AG05",
+      "pipeline_id": "PL01",
+      "priority": "high",
+      "stage_id": "ST01",
+      "status": "open",
+      "subject": "New Long Island territory not syncing to lead routing",
+      "updated_at": "2026-08-18T15:55:00Z"
     },
     {
-      "id": "TKT-004",
-      "company_id": "CMP-004",
-      "contact_id": "CON-006",
-      "subject": "Delivery scheduling conflict — driver arrived outside agreed window",
-      "category": "delivery",
-      "priority": "medium",
+      "contact_id": "CT08",
+      "created_at": "2026-08-10T16:00:00Z",
+      "description": "Executive Home Care franchisee completed the local marketing setup, but the onboarding checklist continued to show the milestone as outstanding.",
+      "id": "TK009",
+      "notes": [
+        {
+          "note_id": "N008",
+          "author_id": "AG01",
+          "body": "Verified marketing setup and manually refreshed onboarding milestone. Franchisee confirmed checklist is now accurate.",
+          "created_at": "2026-08-14T19:00:00Z"
+        }
+      ],
+      "owner_id": "AG01",
+      "pipeline_id": "PL02",
+      "priority": "low",
+      "stage_id": "ST06",
       "status": "resolved",
-      "created_date": "2026-07-22",
-      "resolved_date": "2026-07-24",
-      "owner": "Jordan Kim",
-      "description": "Cannabist SD delivery window is 9am–12pm. Driver arrived at 2:45pm, store could not receive.",
-      "resolution": "Rescheduled for 7/24 AM. Delivery team briefed on account window.",
-      "sla_first_response_target_min": 60,
-      "first_response_time_min": 55,
-      "sla_breached": false,
-      "escalated": false,
-      "escalated_to": null,
-      "escalated_at": null,
+      "subject": "New location onboarding checklist showing incomplete marketing step",
+      "updated_at": "2026-08-14T19:00:00Z",
       "csat_score": 4,
-      "csat_comment": "Good recovery, appreciated the quick reschedule."
+      "csat_sent": true
     },
     {
-      "id": "TKT-005",
-      "company_id": "CMP-003",
-      "contact_id": "CON-005",
-      "subject": "Product substitution request — Wyld Gummies out of stock",
-      "category": "order_issue",
-      "priority": "low",
-      "status": "closed",
-      "created_date": "2026-07-18",
-      "resolved_date": "2026-07-18",
-      "owner": "Sofia Reyes",
-      "description": "Flower Power SF ordered Wyld Gummies but SKU is out of stock.",
-      "resolution": "Yuki approved Camino Gummies substitution. Order fulfilled same day.",
-      "sla_first_response_target_min": 120,
-      "first_response_time_min": 30,
-      "sla_breached": false,
-      "escalated": false,
-      "escalated_to": null,
-      "escalated_at": null,
-      "csat_score": 5,
-      "csat_comment": "Super fast, great alternative suggestion."
-    },
-    {
-      "id": "TKT-006",
-      "company_id": "CMP-002",
-      "contact_id": "CON-003",
-      "subject": "New SKU onboarding request — Fig Farms Craft Flower line",
-      "category": "account",
-      "priority": "medium",
-      "status": "in_progress",
-      "created_date": "2026-07-25",
-      "resolved_date": null,
-      "owner": "Jordan Kim",
-      "description": "Brandon Okafor requesting to add Fig Farms 4 new craft flower SKUs to all MedMen CA locations.",
-      "resolution": null,
-      "sla_first_response_target_min": 60,
-      "first_response_time_min": 40,
-      "sla_breached": false,
-      "escalated": false,
-      "escalated_to": null,
-      "escalated_at": null,
-      "csat_score": null,
-      "csat_comment": null
-    },
-    {
-      "id": "TKT-007",
-      "company_id": "CMP-001",
-      "contact_id": "CON-001",
-      "subject": "Product quality complaint — Raw Garden cart batch separation issue",
-      "category": "product_quality",
+      "contact_id": "CT09",
+      "created_at": "2026-08-18T15:15:00Z",
+      "description": "Maid Brigade franchisee changed operating hours for the Nashville location, but the consumer-facing booking experience still displays the previous hours.",
+      "id": "TK010",
+      "notes": [
+        {
+          "note_id": "N009",
+          "author_id": "AG02",
+          "body": "Back-office record is correct. Public listing cache appears stale; digital team asked to refresh and verify all connected listings.",
+          "created_at": "2026-08-18T16:05:00Z"
+        }
+      ],
+      "owner_id": "AG02",
+      "pipeline_id": "PL01",
       "priority": "high",
-      "status": "in_progress",
-      "created_date": "2026-07-30",
-      "resolved_date": null,
-      "owner": "Sofia Reyes",
-      "description": "Marcus Torres reported 12 units of Raw Garden live resin cartridges showing oil separation. Product pulled from floor.",
-      "resolution": null,
-      "sla_first_response_target_min": 30,
-      "first_response_time_min": 25,
-      "sla_breached": false,
-      "escalated": true,
-      "escalated_to": "Brand Quality Team",
-      "escalated_at": "2026-07-30",
-      "csat_score": null,
-      "csat_comment": null
-    },
-    {
-      "id": "TKT-008",
-      "company_id": "CMP-005",
-      "contact_id": "CON-007",
-      "subject": "Account setup — license verification pending for new onboarding",
-      "category": "account",
-      "priority": "medium",
-      "status": "waiting_on_customer",
-      "created_date": "2026-07-10",
-      "resolved_date": null,
-      "owner": "Priya Nair",
-      "description": "Gold Rush Dispensary onboarding initiated. Awaiting DCC license, insurance certificate, and signed platform agreement.",
-      "resolution": null,
-      "sla_first_response_target_min": 60,
-      "first_response_time_min": 50,
-      "sla_breached": false,
-      "escalated": false,
-      "escalated_to": null,
-      "escalated_at": null,
-      "csat_score": null,
-      "csat_comment": null
-    },
-    {
-      "id": "TKT-009",
-      "company_id": "CMP-007",
-      "contact_id": "CON-009",
-      "subject": "Missing invoice for July 14 delivery — INV-4561 not received",
-      "category": "billing",
-      "priority": "low",
-      "status": "resolved",
-      "created_date": "2026-07-20",
-      "resolved_date": "2026-07-20",
-      "owner": "Priya Nair",
-      "description": "Rachel Dominguez reports INV-4561 not received — sent to outdated billing address.",
-      "resolution": "Invoice resent to correct email. Billing email updated in account profile.",
-      "sla_first_response_target_min": 120,
-      "first_response_time_min": 15,
-      "sla_breached": false,
-      "escalated": false,
-      "escalated_to": null,
-      "escalated_at": null,
-      "csat_score": 5,
-      "csat_comment": "Instant fix, no complaints."
-    },
-    {
-      "id": "TKT-010",
-      "company_id": "CMP-002",
-      "contact_id": "CON-012",
-      "subject": "Compliance hold on Kanha THC Gummies — label review required",
-      "category": "compliance",
-      "priority": "urgent",
+      "stage_id": "ST01",
       "status": "open",
-      "created_date": "2026-08-05",
-      "resolved_date": null,
-      "owner": "Jordan Kim",
-      "description": "DCC flagged Kanha THC Gummies (batch KNH-2026-07) for label compliance review. MedMen WH and BH locations affected. Shipments paused.",
-      "resolution": null,
-      "sla_first_response_target_min": 30,
-      "first_response_time_min": 75,
-      "sla_breached": true,
-      "escalated": true,
-      "escalated_to": "Compliance Team",
-      "escalated_at": "2026-08-05",
-      "csat_score": null,
-      "csat_comment": null
-    },
-    {
-      "id": "TKT-011",
-      "company_id": "CMP-004",
-      "contact_id": "CON-011",
-      "subject": "Short-dated product received — Jetty Pre-Roll 6-pack exp. within 30 days",
-      "category": "product_quality",
-      "priority": "medium",
-      "status": "resolved",
-      "created_date": "2026-07-26",
-      "resolved_date": "2026-07-29",
-      "owner": "Jordan Kim",
-      "description": "Jetty Pre-Roll 6-packs received with expiration within 30 days, violating freshness policy.",
-      "resolution": "Full return authorized. Replacement stock with 90-day shelf life shipped 7/29.",
-      "sla_first_response_target_min": 60,
-      "first_response_time_min": 110,
-      "sla_breached": true,
-      "escalated": false,
-      "escalated_to": null,
-      "escalated_at": null,
-      "csat_score": 3,
-      "csat_comment": "Slow response but the outcome was fair."
-    },
-    {
-      "id": "TKT-012",
-      "company_id": "CMP-006",
-      "contact_id": "CON-008",
-      "subject": "Prospective account inquiry — delivery zone coverage for Fresno",
-      "category": "account",
-      "priority": "low",
-      "status": "closed",
-      "created_date": "2026-06-12",
-      "resolved_date": "2026-06-13",
-      "owner": "Priya Nair",
-      "description": "Devon Hargrove asked about Nabis delivery coverage for Fresno and minimum order size.",
-      "resolution": "Confirmed Fresno is in delivery zone (Tuesday route). Minimum order $500. Onboarding info sent.",
-      "sla_first_response_target_min": 120,
-      "first_response_time_min": 90,
-      "sla_breached": false,
-      "escalated": false,
-      "escalated_to": null,
-      "escalated_at": null,
-      "csat_score": 5,
-      "csat_comment": "Very helpful and informative."
-    },
-    {
-      "id": "TKT-013",
-      "company_id": "CMP-001",
-      "contact_id": "CON-001",
-      "subject": "Short shipment on PO #HAR-9104 — missing 12 units Almora pre-rolls",
-      "category": "order_issue",
-      "priority": "high",
-      "status": "open",
-      "created_date": "2026-08-05",
-      "resolved_date": null,
-      "owner": "Sofia Reyes",
-      "description": "Harborside received PO #HAR-9104 missing 12 units Almora Farm pre-rolls. Flagged by Marcus Torres on delivery receipt.",
-      "resolution": null,
-      "sla_first_response_target_min": 60,
-      "first_response_time_min": null,
-      "sla_breached": false,
-      "escalated": false,
-      "escalated_to": null,
-      "escalated_at": null,
-      "csat_score": null,
-      "csat_comment": null
-    },
-    {
-      "id": "TKT-014",
-      "company_id": "CMP-004",
-      "contact_id": "CON-006",
-      "subject": "Delivery delay — July route running 3 hours behind schedule",
-      "category": "delivery",
-      "priority": "high",
-      "status": "resolved",
-      "created_date": "2026-08-05",
-      "resolved_date": "2026-08-05",
-      "owner": "Jordan Kim",
-      "description": "Cannabist SD informed their July delivery is running 3 hours behind. Carlos Mendez needs to reschedule receiving staff.",
-      "resolution": "Proactively notified account. Driver ETA updated. No missed delivery — store accommodated.",
-      "sla_first_response_target_min": 30,
-      "first_response_time_min": 20,
-      "sla_breached": false,
-      "escalated": false,
-      "escalated_to": null,
-      "escalated_at": null,
-      "csat_score": 4,
-      "csat_comment": "Good proactive communication."
-    },
-    {
-      "id": "TKT-015",
-      "company_id": "CMP-007",
-      "contact_id": "CON-009",
-      "subject": "Billing error — duplicate charge on INV-4590",
-      "category": "billing",
-      "priority": "medium",
-      "status": "open",
-      "created_date": "2026-08-05",
-      "resolved_date": null,
-      "owner": "Priya Nair",
-      "description": "Pacific Releaf flagged a duplicate line item on INV-4590 — charged twice for Raw Garden 1g cartridges.",
-      "resolution": null,
-      "sla_first_response_target_min": 60,
-      "first_response_time_min": null,
-      "sla_breached": false,
-      "escalated": false,
-      "escalated_to": null,
-      "escalated_at": null,
-      "csat_score": null,
-      "csat_comment": null
+      "subject": "Location hours update not reflected on consumer booking page",
+      "updated_at": "2026-08-18T16:05:00Z"
     }
   ]
 }

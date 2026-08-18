@@ -33,98 +33,11 @@ mcp = FastMCP(
     name="hubspot-mock",
     version="1.0.0",
     instructions=(
-        "Mock HubSpot CRM for Nabis cannabis wholesale distribution. "
-        "Query dispensary accounts (companies), buyer contacts, deals pipeline, "
-        "and CX support tickets."
+        "Mock HubSpot Service Hub for Evive Brands franchise support. "
+        "Query and manage support tickets, franchise contacts, agents, "
+        "knowledge base articles, SLA policies, pipelines, and support metrics."
     ),
 )
-
-# ---------------------------------------------------------------------------
-# Companies
-# ---------------------------------------------------------------------------
-
-@mcp.tool()
-def get_companies(
-    id: Optional[str] = Field(default=None, description="Filter by company ID, e.g. CMP-001"),
-    name: Optional[str] = Field(default=None, description="Filter by company name (partial match)"),
-    city: Optional[str] = Field(default=None, description="Filter by city (partial match)"),
-    lifecycle_stage: Optional[str] = Field(default=None, description="Filter by lifecycle stage: customer | lead | opportunity"),
-    account_manager: Optional[str] = Field(default=None, description="Filter by account manager name (partial match)"),
-    tag: Optional[str] = Field(default=None, description="Filter by tag value, e.g. vip or net30 (checks tags array)"),
-) -> list[dict]:
-    """List dispensary accounts. Optionally filter by ID, name, city, lifecycle stage, account manager, or tag."""
-    results = _db["companies"]
-    if id:
-        results = [r for r in results if r["id"].upper() == id.upper()]
-    if name:
-        results = [r for r in results if _match(r, "name", name)]
-    if city:
-        results = [r for r in results if _match(r, "city", city)]
-    if lifecycle_stage:
-        results = [r for r in results if _match(r, "lifecycle_stage", lifecycle_stage)]
-    if account_manager:
-        results = [r for r in results if _match(r, "account_manager", account_manager)]
-    if tag:
-        results = [r for r in results if _match_array(r, "tags", tag)]
-    return results
-
-
-# ---------------------------------------------------------------------------
-# Contacts
-# ---------------------------------------------------------------------------
-
-@mcp.tool()
-def get_contacts(
-    id: Optional[str] = Field(default=None, description="Filter by contact ID, e.g. CON-001"),
-    company_id: Optional[str] = Field(default=None, description="Filter by company ID, e.g. CMP-002"),
-    last_name: Optional[str] = Field(default=None, description="Filter by last name (partial match)"),
-    job_title: Optional[str] = Field(default=None, description="Filter by job title (partial match), e.g. Purchasing Manager"),
-    lifecycle_stage: Optional[str] = Field(default=None, description="Filter by lifecycle stage: customer | lead"),
-) -> list[dict]:
-    """List buyer contacts. Optionally filter by ID, company, last name, job title, or lifecycle stage."""
-    results = _db["contacts"]
-    if id:
-        results = [r for r in results if r["id"].upper() == id.upper()]
-    if company_id:
-        results = [r for r in results if r["company_id"].upper() == company_id.upper()]
-    if last_name:
-        results = [r for r in results if _match(r, "last_name", last_name)]
-    if job_title:
-        results = [r for r in results if _match(r, "job_title", job_title)]
-    if lifecycle_stage:
-        results = [r for r in results if _match(r, "lifecycle_stage", lifecycle_stage)]
-    return results
-
-
-# ---------------------------------------------------------------------------
-# Deals
-# ---------------------------------------------------------------------------
-
-@mcp.tool()
-def get_deals(
-    id: Optional[str] = Field(default=None, description="Filter by deal ID, e.g. DEAL-001"),
-    company_id: Optional[str] = Field(default=None, description="Filter by company ID, e.g. CMP-001"),
-    stage: Optional[str] = Field(default=None, description="Filter by stage: prospecting | qualification | proposal_sent | contract_sent | closed_won | closed_lost"),
-    pipeline: Optional[str] = Field(default=None, description="Filter by pipeline: New Accounts | Reactivation | Upsell"),
-    owner: Optional[str] = Field(default=None, description="Filter by deal owner name (partial match)"),
-    product: Optional[str] = Field(default=None, description="Filter by product name (partial match, checks products array), e.g. Heavy Hitters"),
-) -> list[dict]:
-    """List sales pipeline deals. Optionally filter by ID, company, stage, pipeline, owner, or product."""
-    results = _db["deals"]
-    if id:
-        results = [r for r in results if r["id"].upper() == id.upper()]
-    if company_id:
-        results = [r for r in results if r["company_id"].upper() == company_id.upper()]
-    if stage:
-        results = [r for r in results if _match(r, "stage", stage)]
-    if pipeline:
-        results = [r for r in results if _match(r, "pipeline", pipeline)]
-    if owner:
-        results = [r for r in results if _match(r, "owner", owner)]
-    if product:
-        results = [r for r in results if _match_array(r, "products", product)]
-    return results
-
 
 # ---------------------------------------------------------------------------
 # Tickets
@@ -132,301 +45,60 @@ def get_deals(
 
 @mcp.tool()
 def get_tickets(
-    id: Optional[str] = Field(default=None, description="Filter by ticket ID, e.g. TKT-001"),
-    company_id: Optional[str] = Field(default=None, description="Filter by company ID, e.g. CMP-002"),
-    category: Optional[str] = Field(default=None, description="Filter by category: order_issue | billing | delivery | product_quality | account | compliance"),
+    id: Optional[str] = Field(default=None, description="Filter by ticket ID, e.g. TK001"),
+    contact_id: Optional[str] = Field(default=None, description="Filter by contact ID, e.g. CT01"),
+    owner_id: Optional[str] = Field(default=None, description="Filter by agent/owner ID, e.g. AG01"),
+    status: Optional[str] = Field(default=None, description="Filter by status: open | pending | resolved | closed"),
     priority: Optional[str] = Field(default=None, description="Filter by priority: low | medium | high | urgent"),
-    status: Optional[str] = Field(default=None, description="Filter by status: open | in_progress | waiting_on_customer | resolved | closed"),
-    owner: Optional[str] = Field(default=None, description="Filter by ticket owner name (partial match)"),
+    pipeline_id: Optional[str] = Field(default=None, description="Filter by pipeline: PL01 (Franchise & Customer Support) | PL02 (Franchise Onboarding & Success)"),
+    stage_id: Optional[str] = Field(default=None, description="Filter by stage ID, e.g. ST01"),
+    search: Optional[str] = Field(default=None, description="Search by subject or description (partial match)"),
 ) -> list[dict]:
-    """List CX support tickets. Optionally filter by ID, company, category, priority, status, or owner."""
+    """List franchise support tickets. Filter by ID, contact, owner, status, priority, pipeline, stage, or keyword search."""
     results = _db["tickets"]
     if id:
         results = [r for r in results if r["id"].upper() == id.upper()]
-    if company_id:
-        results = [r for r in results if r["company_id"].upper() == company_id.upper()]
-    if category:
-        results = [r for r in results if _match(r, "category", category)]
-    if priority:
-        results = [r for r in results if _match(r, "priority", priority)]
+    if contact_id:
+        results = [r for r in results if r["contact_id"].upper() == contact_id.upper()]
+    if owner_id:
+        results = [r for r in results if r["owner_id"].upper() == owner_id.upper()]
     if status:
         results = [r for r in results if _match(r, "status", status)]
-    if owner:
-        results = [r for r in results if _match(r, "owner", owner)]
+    if priority:
+        results = [r for r in results if _match(r, "priority", priority)]
+    if pipeline_id:
+        results = [r for r in results if r["pipeline_id"].upper() == pipeline_id.upper()]
+    if stage_id:
+        results = [r for r in results if r["stage_id"].upper() == stage_id.upper()]
+    if search:
+        results = [r for r in results if _match(r, "subject", search) or _match(r, "description", search)]
     return results
 
-
-# ---------------------------------------------------------------------------
-# CX Daily Report
-# ---------------------------------------------------------------------------
-
-@mcp.tool()
-def get_cx_daily_report(
-    date: str = Field(description="Report date, e.g. 2026-08-05. Use today's date for today's report."),
-) -> dict:
-    """Generate a CX daily report for a given date covering: tickets opened, tickets resolved, SLA breaches, escalations, top issue categories, CSAT trends, and staffing recommendations."""
-    tickets = _db["tickets"]
-
-    opened = [t for t in tickets if t["created_date"] == date]
-    resolved = [t for t in tickets if t.get("resolved_date") == date]
-    sla_breaches = [t for t in tickets if t.get("sla_breached") is True and t["created_date"] == date]
-    escalations = [t for t in tickets if t.get("escalated") is True and t.get("escalated_at", "")[:10] == date]
-
-    # Top issue categories across all open/in-progress tickets
-    from collections import Counter
-    active = [t for t in tickets if t["status"] in ("open", "in_progress")]
-    category_counts = Counter(t["category"] for t in active)
-    top_categories = [{"category": k, "count": v} for k, v in category_counts.most_common()]
-
-    # CSAT — all tickets with scores
-    scored = [t for t in tickets if t.get("csat_score") is not None]
-    avg_csat = round(sum(t["csat_score"] for t in scored) / len(scored), 2) if scored else None
-    low_csat = [t for t in scored if t["csat_score"] <= 3]
-
-    # Staffing recommendation based on open ticket volume
-    open_tickets = [t for t in tickets if t["status"] in ("open", "in_progress")]
-    urgent_high = [t for t in open_tickets if t["priority"] in ("urgent", "high")]
-    if len(urgent_high) >= 3:
-        staffing_rec = f"High priority queue has {len(urgent_high)} urgent/high tickets — consider adding 1 additional CX agent or redistributing load from Priya Nair (highest open count)."
-    elif len(open_tickets) > 5:
-        staffing_rec = f"{len(open_tickets)} open tickets across the team — current staffing appears sufficient but monitor closely."
-    else:
-        staffing_rec = "Ticket volume is manageable with current staffing."
-
-    return {
-        "report_date": date,
-        "tickets_opened": {"count": len(opened), "tickets": [{"id": t["id"], "subject": t["subject"], "priority": t["priority"], "owner": t["owner"]} for t in opened]},
-        "tickets_resolved": {"count": len(resolved), "tickets": [{"id": t["id"], "subject": t["subject"], "owner": t["owner"]} for t in resolved]},
-        "sla_breaches": {"count": len(sla_breaches), "tickets": [{"id": t["id"], "subject": t["subject"], "first_response_time_min": t.get("first_response_time_min"), "sla_target_min": t.get("sla_first_response_target_min")} for t in sla_breaches]},
-        "escalations": {"count": len(escalations), "tickets": [{"id": t["id"], "subject": t["subject"], "escalated_to": t.get("escalated_to")} for t in escalations]},
-        "top_issue_categories": top_categories,
-        "csat": {"avg_score": avg_csat, "total_responses": len(scored), "low_scores": [{"id": t["id"], "score": t["csat_score"], "comment": t.get("csat_comment")} for t in low_csat]},
-        "staffing_recommendation": staffing_rec,
-    }
-
-
-# ---------------------------------------------------------------------------
-# Write Tools — Companies
-# ---------------------------------------------------------------------------
-
-@mcp.tool()
-def create_company(
-    name: str = Field(description="Company name"),
-    city: str = Field(description="City"),
-    state: str = Field(default="CA", description="State"),
-    account_manager: Optional[str] = Field(default=None, description="Account manager name"),
-    lifecycle_stage: str = Field(default="lead", description="lifecycle stage: customer | lead | opportunity"),
-    phone: Optional[str] = Field(default=None, description="Phone number"),
-    website: Optional[str] = Field(default=None, description="Website URL"),
-    tags: Optional[str] = Field(default=None, description="Comma-separated tags, e.g. vip,net30"),
-) -> dict:
-    """Create a new dispensary account (company). Returns the created record."""
-    new_id = f"CMP-{str(len(_db['companies']) + 1).zfill(3)}"
-    record = {
-        "id": new_id,
-        "name": name,
-        "city": city,
-        "state": state,
-        "industry": "Cannabis Retail",
-        "lifecycle_stage": lifecycle_stage,
-        "account_manager": account_manager,
-        "phone": phone,
-        "website": website,
-        "tags": [t.strip() for t in tags.split(",")] if tags else [],
-        "created_date": datetime.now(timezone.utc).date().isoformat(),
-        "last_activity_date": datetime.now(timezone.utc).date().isoformat(),
-    }
-    _db["companies"].append(record)
-    return record
-
-
-@mcp.tool()
-def update_company(
-    id: str = Field(description="Company ID to update, e.g. CMP-001"),
-    lifecycle_stage: Optional[str] = Field(default=None, description="New lifecycle stage: customer | lead | opportunity"),
-    account_manager: Optional[str] = Field(default=None, description="New account manager name"),
-    tags: Optional[str] = Field(default=None, description="Comma-separated tags to set, e.g. vip,net30"),
-    phone: Optional[str] = Field(default=None, description="Updated phone number"),
-    website: Optional[str] = Field(default=None, description="Updated website"),
-) -> dict:
-    """Update an existing company record. Returns the updated record."""
-    matches = [r for r in _db["companies"] if r["id"].upper() == id.upper()]
-    if not matches:
-        return {"error": f"Company {id} not found"}
-    record = matches[0]
-    if lifecycle_stage:
-        record["lifecycle_stage"] = lifecycle_stage
-    if account_manager:
-        record["account_manager"] = account_manager
-    if tags is not None:
-        record["tags"] = [t.strip() for t in tags.split(",")]
-    if phone:
-        record["phone"] = phone
-    if website:
-        record["website"] = website
-    record["last_activity_date"] = datetime.now(timezone.utc).date().isoformat()
-    return record
-
-
-# ---------------------------------------------------------------------------
-# Write Tools — Contacts
-# ---------------------------------------------------------------------------
-
-@mcp.tool()
-def create_contact(
-    first_name: str = Field(description="First name"),
-    last_name: str = Field(description="Last name"),
-    email: str = Field(description="Email address"),
-    company_id: str = Field(description="Company ID this contact belongs to, e.g. CMP-001"),
-    job_title: Optional[str] = Field(default=None, description="Job title, e.g. Purchasing Manager"),
-    phone: Optional[str] = Field(default=None, description="Phone number"),
-    preferred_contact_method: str = Field(default="email", description="email | phone | text"),
-    notes: Optional[str] = Field(default=None, description="Additional notes"),
-) -> dict:
-    """Create a new buyer contact. Returns the created record."""
-    new_id = f"CON-{str(len(_db['contacts']) + 1).zfill(3)}"
-    record = {
-        "id": new_id,
-        "company_id": company_id,
-        "first_name": first_name,
-        "last_name": last_name,
-        "email": email,
-        "phone": phone,
-        "job_title": job_title,
-        "lifecycle_stage": "lead",
-        "created_date": datetime.now(timezone.utc).date().isoformat(),
-        "last_contacted_date": None,
-        "preferred_contact_method": preferred_contact_method,
-        "notes": notes,
-    }
-    _db["contacts"].append(record)
-    return record
-
-
-@mcp.tool()
-def update_contact(
-    id: str = Field(description="Contact ID to update, e.g. CON-001"),
-    job_title: Optional[str] = Field(default=None, description="Updated job title"),
-    email: Optional[str] = Field(default=None, description="Updated email"),
-    phone: Optional[str] = Field(default=None, description="Updated phone"),
-    lifecycle_stage: Optional[str] = Field(default=None, description="Updated lifecycle stage: customer | lead"),
-    preferred_contact_method: Optional[str] = Field(default=None, description="email | phone | text"),
-    notes: Optional[str] = Field(default=None, description="Updated notes"),
-) -> dict:
-    """Update an existing contact record. Returns the updated record."""
-    matches = [r for r in _db["contacts"] if r["id"].upper() == id.upper()]
-    if not matches:
-        return {"error": f"Contact {id} not found"}
-    record = matches[0]
-    if job_title:
-        record["job_title"] = job_title
-    if email:
-        record["email"] = email
-    if phone:
-        record["phone"] = phone
-    if lifecycle_stage:
-        record["lifecycle_stage"] = lifecycle_stage
-    if preferred_contact_method:
-        record["preferred_contact_method"] = preferred_contact_method
-    if notes:
-        record["notes"] = notes
-    record["last_contacted_date"] = datetime.now(timezone.utc).date().isoformat()
-    return record
-
-
-# ---------------------------------------------------------------------------
-# Write Tools — Deals
-# ---------------------------------------------------------------------------
-
-@mcp.tool()
-def create_deal(
-    deal_name: str = Field(description="Deal name"),
-    company_id: str = Field(description="Company ID, e.g. CMP-001"),
-    contact_id: Optional[str] = Field(default=None, description="Contact ID, e.g. CON-001"),
-    stage: str = Field(default="prospecting", description="Stage: prospecting | qualification | proposal_sent | contract_sent | closed_won | closed_lost"),
-    amount_usd: Optional[float] = Field(default=None, description="Deal value in USD"),
-    pipeline: str = Field(default="New Accounts", description="New Accounts | Reactivation | Upsell"),
-    owner: Optional[str] = Field(default=None, description="Deal owner name"),
-    close_date: Optional[str] = Field(default=None, description="Expected close date, e.g. 2026-08-31"),
-    products: Optional[str] = Field(default=None, description="Comma-separated product names, e.g. Heavy Hitters,Almora"),
-) -> dict:
-    """Create a new deal in the pipeline. Returns the created record."""
-    new_id = f"DEAL-{str(len(_db['deals']) + 1).zfill(3)}"
-    record = {
-        "id": new_id,
-        "company_id": company_id,
-        "contact_id": contact_id,
-        "deal_name": deal_name,
-        "stage": stage,
-        "amount_usd": amount_usd,
-        "pipeline": pipeline,
-        "owner": owner,
-        "close_date": close_date,
-        "products": [p.strip() for p in products.split(",")] if products else [],
-        "created_date": datetime.now(timezone.utc).date().isoformat(),
-        "last_activity_date": datetime.now(timezone.utc).date().isoformat(),
-    }
-    _db["deals"].append(record)
-    return record
-
-
-@mcp.tool()
-def update_deal(
-    id: str = Field(description="Deal ID to update, e.g. DEAL-001"),
-    stage: Optional[str] = Field(default=None, description="New stage: prospecting | qualification | proposal_sent | contract_sent | closed_won | closed_lost"),
-    amount_usd: Optional[float] = Field(default=None, description="Updated deal value in USD"),
-    close_date: Optional[str] = Field(default=None, description="Updated close date, e.g. 2026-08-31"),
-    owner: Optional[str] = Field(default=None, description="Updated deal owner"),
-    products: Optional[str] = Field(default=None, description="Comma-separated products to set"),
-) -> dict:
-    """Update an existing deal. Returns the updated record."""
-    matches = [r for r in _db["deals"] if r["id"].upper() == id.upper()]
-    if not matches:
-        return {"error": f"Deal {id} not found"}
-    record = matches[0]
-    if stage:
-        record["stage"] = stage
-    if amount_usd is not None:
-        record["amount_usd"] = amount_usd
-    if close_date:
-        record["close_date"] = close_date
-    if owner:
-        record["owner"] = owner
-    if products is not None:
-        record["products"] = [p.strip() for p in products.split(",")]
-    record["last_activity_date"] = datetime.now(timezone.utc).date().isoformat()
-    return record
-
-
-# ---------------------------------------------------------------------------
-# Write Tools — Tickets
-# ---------------------------------------------------------------------------
 
 @mcp.tool()
 def create_ticket(
     subject: str = Field(description="Ticket subject"),
-    company_id: str = Field(description="Company ID, e.g. CMP-001"),
-    category: str = Field(description="order_issue | billing | delivery | product_quality | account | compliance"),
+    contact_id: str = Field(description="Contact ID, e.g. CT01"),
     priority: str = Field(default="medium", description="low | medium | high | urgent"),
-    contact_id: Optional[str] = Field(default=None, description="Contact ID, e.g. CON-001"),
+    pipeline_id: str = Field(default="PL01", description="PL01 (Franchise & Customer Support) | PL02 (Franchise Onboarding & Success)"),
+    owner_id: Optional[str] = Field(default=None, description="Agent ID to assign, e.g. AG01"),
     description: Optional[str] = Field(default=None, description="Ticket description"),
-    owner: Optional[str] = Field(default=None, description="Assigned CX owner"),
 ) -> dict:
-    """Create a new CX support ticket. Returns the created record."""
-    new_id = f"TKT-{str(len(_db['tickets']) + 1).zfill(3)}"
+    """Create a new franchise support ticket."""
+    new_id = f"TK{str(len(_db['tickets']) + 1).zfill(3)}"
     record = {
         "id": new_id,
-        "company_id": company_id,
         "contact_id": contact_id,
         "subject": subject,
-        "category": category,
+        "description": description,
         "priority": priority,
         "status": "open",
-        "created_date": datetime.now(timezone.utc).date().isoformat(),
-        "resolved_date": None,
-        "owner": owner,
-        "description": description,
-        "resolution": None,
+        "pipeline_id": pipeline_id,
+        "stage_id": "ST01",
+        "owner_id": owner_id,
+        "notes": [],
+        "created_at": datetime.now(timezone.utc).isoformat(),
+        "updated_at": datetime.now(timezone.utc).isoformat(),
     }
     _db["tickets"].append(record)
     return record
@@ -434,13 +106,15 @@ def create_ticket(
 
 @mcp.tool()
 def update_ticket(
-    id: str = Field(description="Ticket ID to update, e.g. TKT-001"),
-    status: Optional[str] = Field(default=None, description="New status: open | in_progress | waiting_on_customer | resolved | closed"),
+    id: str = Field(description="Ticket ID to update, e.g. TK001"),
+    status: Optional[str] = Field(default=None, description="New status: open | pending | resolved | closed"),
     priority: Optional[str] = Field(default=None, description="New priority: low | medium | high | urgent"),
-    owner: Optional[str] = Field(default=None, description="Reassign to new owner"),
-    resolution: Optional[str] = Field(default=None, description="Resolution notes — also marks ticket as resolved"),
+    stage_id: Optional[str] = Field(default=None, description="New stage ID, e.g. ST02"),
+    owner_id: Optional[str] = Field(default=None, description="Reassign to agent ID"),
+    note: Optional[str] = Field(default=None, description="Add a note to the ticket"),
+    csat_score: Optional[int] = Field(default=None, description="CSAT score 1-5"),
 ) -> dict:
-    """Update an existing CX ticket status, priority, owner, or resolution. Returns the updated record."""
+    """Update a ticket's status, priority, stage, owner, or add a note."""
     matches = [r for r in _db["tickets"] if r["id"].upper() == id.upper()]
     if not matches:
         return {"error": f"Ticket {id} not found"}
@@ -449,13 +123,185 @@ def update_ticket(
         record["status"] = status
     if priority:
         record["priority"] = priority
-    if owner:
-        record["owner"] = owner
-    if resolution:
-        record["resolution"] = resolution
-        record["status"] = "resolved"
-        record["resolved_date"] = datetime.now(timezone.utc).date().isoformat()
+    if stage_id:
+        record["stage_id"] = stage_id
+    if owner_id:
+        record["owner_id"] = owner_id
+    if csat_score is not None:
+        record["csat_score"] = csat_score
+        record["csat_sent"] = True
+    if note:
+        record["notes"].append({
+            "note_id": f"N{str(len(record['notes']) + 1).zfill(3)}",
+            "author_id": owner_id or record.get("owner_id"),
+            "body": note,
+            "created_at": datetime.now(timezone.utc).isoformat(),
+        })
+    record["updated_at"] = datetime.now(timezone.utc).isoformat()
     return record
+
+
+# ---------------------------------------------------------------------------
+# Contacts
+# ---------------------------------------------------------------------------
+
+@mcp.tool()
+def get_contacts(
+    id: Optional[str] = Field(default=None, description="Filter by contact ID, e.g. CT01"),
+    last_name: Optional[str] = Field(default=None, description="Filter by last name (partial match)"),
+    company: Optional[str] = Field(default=None, description="Filter by franchise/company name (partial match)"),
+    email: Optional[str] = Field(default=None, description="Filter by email (partial match)"),
+) -> list[dict]:
+    """List franchise contacts. Filter by ID, name, company, or email."""
+    results = _db["contacts"]
+    if id:
+        results = [r for r in results if r["id"].upper() == id.upper()]
+    if last_name:
+        results = [r for r in results if _match(r, "last_name", last_name)]
+    if company:
+        results = [r for r in results if _match(r, "company", company)]
+    if email:
+        results = [r for r in results if _match(r, "email", email)]
+    return results
+
+
+# ---------------------------------------------------------------------------
+# Agents
+# ---------------------------------------------------------------------------
+
+@mcp.tool()
+def get_agents(
+    id: Optional[str] = Field(default=None, description="Filter by agent ID, e.g. AG01"),
+    name: Optional[str] = Field(default=None, description="Filter by agent name (partial match)"),
+    role: Optional[str] = Field(default=None, description="Filter by role (partial match)"),
+) -> list[dict]:
+    """List support agents. Filter by ID, name, or role."""
+    results = _db["agents"]
+    if id:
+        results = [r for r in results if r["id"].upper() == id.upper()]
+    if name:
+        results = [r for r in results if _match(r, "name", name)]
+    if role:
+        results = [r for r in results if _match(r, "role", role)]
+    return results
+
+
+# ---------------------------------------------------------------------------
+# Knowledge Base
+# ---------------------------------------------------------------------------
+
+@mcp.tool()
+def get_knowledge_base_articles(
+    id: Optional[str] = Field(default=None, description="Filter by article ID, e.g. KB01"),
+    category: Optional[str] = Field(default=None, description="Filter by category (partial match), e.g. Franchise Operations"),
+    status: Optional[str] = Field(default=None, description="Filter by status: published | draft"),
+    tag: Optional[str] = Field(default=None, description="Filter by tag (checks tags array), e.g. billing"),
+    search: Optional[str] = Field(default=None, description="Search by title or summary (partial match)"),
+) -> list[dict]:
+    """List knowledge base articles. Filter by ID, category, status, tag, or keyword search."""
+    results = _db["knowledge_base_articles"]
+    if id:
+        results = [r for r in results if r["id"].upper() == id.upper()]
+    if category:
+        results = [r for r in results if _match(r, "category", category)]
+    if status:
+        results = [r for r in results if _match(r, "status", status)]
+    if tag:
+        results = [r for r in results if _match_array(r, "tags", tag)]
+    if search:
+        results = [r for r in results if _match(r, "title", search) or _match(r, "summary", search)]
+    return results
+
+
+# ---------------------------------------------------------------------------
+# SLA Policies
+# ---------------------------------------------------------------------------
+
+@mcp.tool()
+def get_sla_policies(
+    ticket_id: Optional[str] = Field(default=None, description="Filter by ticket ID, e.g. TK001"),
+    status: Optional[str] = Field(default=None, description="Filter by SLA status: on_track | at_risk | breached | met"),
+    policy_name: Optional[str] = Field(default=None, description="Filter by policy name (partial match)"),
+) -> list[dict]:
+    """List SLA policy records. Filter by ticket, status, or policy name."""
+    results = _db["sla_policies"]
+    if ticket_id:
+        results = [r for r in results if r["ticket_id"].upper() == ticket_id.upper()]
+    if status:
+        results = [r for r in results if _match(r, "status", status)]
+    if policy_name:
+        results = [r for r in results if _match(r, "policy_name", policy_name)]
+    return results
+
+
+# ---------------------------------------------------------------------------
+# Pipelines
+# ---------------------------------------------------------------------------
+
+@mcp.tool()
+def get_pipelines(
+    id: Optional[str] = Field(default=None, description="Filter by pipeline ID, e.g. PL01"),
+    name: Optional[str] = Field(default=None, description="Filter by pipeline name (partial match)"),
+) -> list[dict]:
+    """List ticket pipelines and their stages."""
+    results = _db["pipelines"]
+    if id:
+        results = [r for r in results if r["id"].upper() == id.upper()]
+    if name:
+        results = [r for r in results if _match(r, "name", name)]
+    return results
+
+
+# ---------------------------------------------------------------------------
+# Support Metrics
+# ---------------------------------------------------------------------------
+
+@mcp.tool()
+def get_support_metrics() -> dict:
+    """Return aggregated support metrics including open/resolved ticket counts, avg response/resolution times, CSAT score, SLA compliance, and top ticket categories."""
+    return _db["support_metrics"]
+
+
+# ---------------------------------------------------------------------------
+# CX Daily Report
+# ---------------------------------------------------------------------------
+
+@mcp.tool()
+def get_cx_daily_report(
+    date: Optional[str] = Field(default=None, description="Report date prefix, e.g. 2026-08-18. Defaults to all tickets if not provided."),
+) -> dict:
+    """Generate a franchise support daily report covering tickets opened, resolved, SLA risks, escalations, top categories, CSAT, and agent workload."""
+    from collections import Counter
+    tickets = _db["tickets"]
+
+    opened = [t for t in tickets if date and t["created_at"].startswith(date)] if date else tickets
+    resolved = [t for t in tickets if t["status"] in ("resolved", "closed") and (not date or t.get("updated_at", "").startswith(date))]
+    at_risk = [s for s in _db["sla_policies"] if s["status"] in ("at_risk", "breached")]
+    urgent_high = [t for t in tickets if t["priority"] in ("urgent", "high") and t["status"] in ("open", "pending")]
+
+    category_counts = Counter()
+    for cat in _db["support_metrics"]["top_categories"]:
+        category_counts[cat["category"]] = cat["count"]
+    top_categories = [{"category": k, "count": v} for k, v in category_counts.most_common()]
+
+    scored = [t for t in tickets if t.get("csat_score") is not None]
+    avg_csat = round(sum(t["csat_score"] for t in scored) / len(scored), 2) if scored else _db["support_metrics"]["csat_avg_score"]
+
+    agent_load = [{"agent": a["name"], "role": a["role"], "open_tickets": a["open_ticket_count"]} for a in _db["agents"]]
+    overloaded = [a for a in agent_load if a["open_tickets"] >= 3]
+    staffing_rec = f"{len(overloaded)} agent(s) carrying 3+ open tickets — consider redistributing: {', '.join(a['agent'] for a in overloaded)}." if overloaded else "Agent workload is balanced."
+
+    return {
+        "report_date": date or "all",
+        "tickets_opened": {"count": len(opened), "tickets": [{"id": t["id"], "subject": t["subject"], "priority": t["priority"], "owner_id": t["owner_id"]} for t in opened]},
+        "tickets_resolved": {"count": len(resolved), "tickets": [{"id": t["id"], "subject": t["subject"]} for t in resolved]},
+        "sla_at_risk": {"count": len(at_risk), "tickets": [{"ticket_id": s["ticket_id"], "policy": s["policy_name"], "status": s["status"]} for s in at_risk]},
+        "urgent_high_open": {"count": len(urgent_high), "tickets": [{"id": t["id"], "subject": t["subject"], "priority": t["priority"]} for t in urgent_high]},
+        "top_categories": top_categories,
+        "csat": {"avg_score": avg_csat, "total_responses": len(scored) or _db["support_metrics"]["csat_responses"]},
+        "agent_workload": agent_load,
+        "staffing_recommendation": staffing_rec,
+    }
 
 
 # ---------------------------------------------------------------------------
