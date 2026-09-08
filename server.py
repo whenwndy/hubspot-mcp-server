@@ -356,10 +356,10 @@ def update_contact(
 @mcp.tool()
 def create_deal(
     deal_name: str = Field(description="Name of the deal, e.g. Velvet Thread — Spring Order"),
-    company_id: Optional[str] = Field(default=None, description="Associated company ID, e.g. CO01"),
-    contact_id: Optional[str] = Field(default=None, description="Associated contact ID, e.g. CT01"),
     pipeline: str = Field(description="Pipeline: Wholesale | Corporate_Gifting | Retail_Partnership"),
     stage: str = Field(description="Initial stage: appointment_scheduled | qualified_to_buy | presentation_scheduled | decision_maker_bought_in | contract_sent"),
+    company_id: Optional[str] = Field(default=None, description="Associated company ID, e.g. CO01"),
+    contact_id: Optional[str] = Field(default=None, description="Associated contact ID, e.g. CT01"),
     amount_usd: Optional[float] = Field(default=None, description="Deal value in USD"),
     close_date: Optional[str] = Field(default=None, description="Expected close date, e.g. 2026-10-31"),
     owner_id: Optional[str] = Field(default=None, description="Assigned rep ID, e.g. REP01"),
