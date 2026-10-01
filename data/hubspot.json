@@ -13,7 +13,13 @@
       "created_at": "2026-01-08T09:00:00Z",
       "last_activity_at": "2026-09-18T14:00:00Z",
       "owner_id": "REP01",
-      "tags": ["ceo", "series-c", "fintech", "repeat-client", "high-value"],
+      "tags": [
+        "ceo",
+        "series-c",
+        "fintech",
+        "repeat-client",
+        "high-value"
+      ],
       "notes": "CEO of NovaPay, a Series C fintech processing $4B annually. First engaged us in Q1 for VP Engineering search — closed successfully in 78 days. Now back for Head of Data search. Very referral-driven; introduced us to two other CEOs in his network. Prefers Thursday morning calls.",
       "contact_type": "client"
     },
@@ -30,7 +36,13 @@
       "created_at": "2026-04-15T10:30:00Z",
       "last_activity_at": "2026-09-20T11:15:00Z",
       "owner_id": "REP02",
-      "tags": ["chro", "saas", "growth-stage", "multiple-roles", "decision-maker"],
+      "tags": [
+        "chro",
+        "saas",
+        "growth-stage",
+        "multiple-roles",
+        "decision-maker"
+      ],
       "notes": "CHRO at Helios Scale, a B2B SaaS company with ~600 employees. Reached out via LinkedIn after seeing our 'Engineering Leadership Compensation Report'. Currently has 3 open VP-level roles. Proposal sent for VP Engineering + VP Platform searches — combined $220K in fees. Legal reviewing MSA.",
       "contact_type": "client"
     },
@@ -47,7 +59,13 @@
       "created_at": "2025-11-02T08:45:00Z",
       "last_activity_at": "2026-09-22T09:30:00Z",
       "owner_id": "REP01",
-      "tags": ["ceo", "ai-startup", "series-b", "top-client", "ambassador"],
+      "tags": [
+        "ceo",
+        "ai-startup",
+        "series-b",
+        "top-client",
+        "ambassador"
+      ],
       "notes": "CEO of Apex AI, raised $85M Series B in 2025. Engaged us for CTO search — placed Dr. Lena Park in March 2026. Highly satisfied client; gave us a LinkedIn testimonial. Re-engaged for Head of AI/ML search. Fast decision-maker, authorized retainer same week as proposal.",
       "contact_type": "client"
     },
@@ -64,7 +82,13 @@
       "created_at": "2026-05-20T13:00:00Z",
       "last_activity_at": "2026-09-17T16:00:00Z",
       "owner_id": "REP03",
-      "tags": ["pe-firm", "portfolio-ops", "multi-deal", "enterprise", "conference-himss"],
+      "tags": [
+        "pe-firm",
+        "portfolio-ops",
+        "multi-deal",
+        "enterprise",
+        "conference-himss"
+      ],
       "notes": "Met at TechCrunch Disrupt 2026. VP Portfolio Ops at Meridian Capital — manages talent needs across 9 portfolio companies. Interested in a preferred-vendor arrangement for tech leadership searches across the portfolio. Discovery call completed; working on a master retainer framework proposal. Huge potential account.",
       "contact_type": "client"
     },
@@ -81,7 +105,13 @@
       "created_at": "2026-06-10T11:00:00Z",
       "last_activity_at": "2026-09-21T10:00:00Z",
       "owner_id": "REP02",
-      "tags": ["ceo", "security", "enterprise", "inbound-lead", "ciso-search"],
+      "tags": [
+        "ceo",
+        "security",
+        "enterprise",
+        "inbound-lead",
+        "ciso-search"
+      ],
       "notes": "CEO at CipherShield, an enterprise security firm with $120M ARR. Submitted 'Request an Intro Call' form after a board member recommended us. Looking to place both a CISO and VP of Security. Retainer signed for CISO search; VP Security added as expansion deal. Both in active search phase.",
       "contact_type": "client"
     },
@@ -98,7 +128,13 @@
       "created_at": "2026-07-03T09:15:00Z",
       "last_activity_at": "2026-09-19T13:45:00Z",
       "owner_id": "REP04",
-      "tags": ["vp-talent", "healthtech", "series-d", "warm-lead", "engineering-search"],
+      "tags": [
+        "vp-talent",
+        "healthtech",
+        "series-d",
+        "warm-lead",
+        "engineering-search"
+      ],
       "notes": "VP Talent at Vantage Health, a Series D healthtech with 1,200 employees. Found us through our alumni network — we placed their current CTO two years ago. Exploring a VP Engineering search as current VP has announced departure for Q4. Compensation budget is $380K total comp.",
       "contact_type": "client"
     },
@@ -115,7 +151,13 @@
       "created_at": "2026-08-14T14:00:00Z",
       "last_activity_at": "2026-09-10T10:30:00Z",
       "owner_id": "REP03",
-      "tags": ["ceo", "infrastructure", "series-b", "new-lead", "linkedin-outbound"],
+      "tags": [
+        "ceo",
+        "infrastructure",
+        "series-b",
+        "new-lead",
+        "linkedin-outbound"
+      ],
       "notes": "CEO at Stackbridge, a cloud infrastructure startup that just closed a $60M Series B in July 2026. Responded to our LinkedIn outreach sequence about post-funding talent strategy. Downloaded our Compensation Report. Has not yet scheduled a discovery call — follow-up cadence active.",
       "contact_type": "client"
     },
@@ -132,7 +174,13 @@
       "created_at": "2026-09-05T10:00:00Z",
       "last_activity_at": "2026-09-12T09:00:00Z",
       "owner_id": "REP01",
-      "tags": ["cfo", "ecommerce", "pe-backed", "early-stage-lead", "referred-by-ct01"],
+      "tags": [
+        "cfo",
+        "ecommerce",
+        "pe-backed",
+        "early-stage-lead",
+        "referred-by-ct01"
+      ],
       "notes": "CFO at SolveCommerce, a PE-backed B2B ecommerce platform. Referred by Marcus Delgado (CT01). Company is 18 months post-acquisition by Crestwood PE — undergoing leadership team rebuild. Potentially needs CTO + VP Product. Early conversation; intro call scheduled for Sep 30.",
       "contact_type": "client"
     },
@@ -149,7 +197,13 @@
       "created_at": "2026-03-18T10:00:00Z",
       "last_activity_at": "2026-09-22T15:00:00Z",
       "owner_id": "REP01",
-      "tags": ["cto", "active-candidate", "top-talent", "fintech-background", "available-q4"],
+      "tags": [
+        "cto",
+        "active-candidate",
+        "top-talent",
+        "fintech-background",
+        "available-q4"
+      ],
       "notes": "Former CTO at Series D fintech; company acquired in Feb 2026. 18 years experience, deep expertise in distributed payments systems. We placed her at Lattice 3 years ago. Now open to next CTO role at well-capitalized startup. Comp target: $450K-$520K total. Available Q4 2026. Presenting to NovaPay and SolveCommerce.",
       "contact_type": "candidate"
     },
@@ -166,7 +220,13 @@
       "created_at": "2026-07-22T09:00:00Z",
       "last_activity_at": "2026-09-15T11:30:00Z",
       "owner_id": "REP02",
-      "tags": ["vp-engineering", "passive-candidate", "top-talent", "public-company", "strong-pedigree"],
+      "tags": [
+        "vp-engineering",
+        "passive-candidate",
+        "top-talent",
+        "public-company",
+        "strong-pedigree"
+      ],
       "notes": "VP Engineering at Cloudform (NASDAQ: CLFM), managing 180 engineers across 4 orgs. Passively exploring — responds well to relationship-based outreach. Joined our Talent Network after downloading the AI-First Engineering report. Currently earning $390K; targeting $420K+ in a more impactful role. Ideal for Helios Scale or Vantage Health searches.",
       "contact_type": "candidate"
     },
@@ -183,7 +243,13 @@
       "created_at": "2026-05-05T11:00:00Z",
       "last_activity_at": "2026-09-20T14:00:00Z",
       "owner_id": "REP02",
-      "tags": ["ciso", "active-candidate", "top-talent", "cleared", "startup-experience"],
+      "tags": [
+        "ciso",
+        "active-candidate",
+        "top-talent",
+        "cleared",
+        "startup-experience"
+      ],
       "notes": "CISO at Fortis Defense Tech; considering move to high-growth commercial sector after 8 years in govtech/defense. TS/SCI cleared. Deep expertise in zero-trust architecture and SOC 2 Type II. Strong fit for CipherShield CISO search. Interviewed with CipherShield on 9/18 — feedback very positive. Offer stage imminent.",
       "contact_type": "candidate"
     },
@@ -200,7 +266,13 @@
       "created_at": "2026-06-28T10:30:00Z",
       "last_activity_at": "2026-09-21T09:00:00Z",
       "owner_id": "REP01",
-      "tags": ["head-of-ai-ml", "active-candidate", "top-talent", "llm-expertise", "available-immediately"],
+      "tags": [
+        "head-of-ai-ml",
+        "active-candidate",
+        "top-talent",
+        "llm-expertise",
+        "available-immediately"
+      ],
       "notes": "Head of AI/ML at DataBridge Analytics; team recently eliminated in restructuring. PhD in ML from CMU, 10 years industry experience. Deep expertise in LLM fine-tuning, MLOps, and production AI systems at scale. Available immediately. Top candidate for Apex AI Head of AI/ML search. First-round interviews completed 9/19.",
       "contact_type": "candidate"
     },
@@ -217,7 +289,13 @@
       "created_at": "2024-08-10T09:00:00Z",
       "last_activity_at": "2026-09-14T12:00:00Z",
       "owner_id": "REP04",
-      "tags": ["vp-product", "placed-alumni", "passive-candidate", "fintech-background", "top-talent"],
+      "tags": [
+        "vp-product",
+        "placed-alumni",
+        "passive-candidate",
+        "fintech-background",
+        "top-talent"
+      ],
       "notes": "Placed at FinCore by Riviera in 2024. Now open to CPO-level opportunities after FinCore was acquired. 12 years product leadership, deep B2B fintech experience. Not actively looking but would move for the right CPO role at Series C+ company. Keep warm — check in quarterly.",
       "contact_type": "candidate"
     },
@@ -234,7 +312,12 @@
       "created_at": "2026-08-30T10:00:00Z",
       "last_activity_at": "2026-09-16T10:00:00Z",
       "owner_id": "REP03",
-      "tags": ["vp-infrastructure", "passive-candidate", "cloud-native", "platform-experience"],
+      "tags": [
+        "vp-infrastructure",
+        "passive-candidate",
+        "cloud-native",
+        "platform-experience"
+      ],
       "notes": "VP Infrastructure at Gridline; joined our Talent Network after seeing LinkedIn post about VP Platform comp trends. Manages multi-cloud platform supporting $2B in transactions. Open to VP Platform or VP Infrastructure roles at growth-stage companies. Comp target $380K+. Good fit for Helios Scale VP Platform search.",
       "contact_type": "candidate"
     },
@@ -251,12 +334,17 @@
       "created_at": "2026-09-02T11:00:00Z",
       "last_activity_at": "2026-09-23T09:30:00Z",
       "owner_id": "REP04",
-      "tags": ["vp-engineering", "active-candidate", "available-immediately", "diversity-hire", "top-talent"],
+      "tags": [
+        "vp-engineering",
+        "active-candidate",
+        "available-immediately",
+        "diversity-hire",
+        "top-talent"
+      ],
       "notes": "Submitted profile via 'Join Riviera Talent Network' form. Former VP Engineering at a 400-person fintech; company did a RIF in August. Scaled engineering from 15 to 90 engineers in 3 years. Strong in Agile transformation and hiring at scale. Presenting to Vantage Health for VP Engineering search. Comp target $360K-$400K.",
       "contact_type": "candidate"
     }
   ],
-
   "companies": [
     {
       "id": "CO01",
@@ -274,8 +362,16 @@
       "created_at": "2025-11-02T08:45:00Z",
       "last_activity_at": "2026-09-22T09:30:00Z",
       "deal_count": 2,
-      "tags": ["repeat-client", "ai-infrastructure", "high-growth", "series-b", "ambassador-account"],
-      "open_roles": ["Head of AI/ML"]
+      "tags": [
+        "repeat-client",
+        "ai-infrastructure",
+        "high-growth",
+        "series-b",
+        "ambassador-account"
+      ],
+      "open_roles": [
+        "Head of AI/ML"
+      ]
     },
     {
       "id": "CO02",
@@ -293,8 +389,15 @@
       "created_at": "2026-01-08T09:00:00Z",
       "last_activity_at": "2026-09-18T14:00:00Z",
       "deal_count": 2,
-      "tags": ["repeat-client", "payments", "series-c", "high-value-account"],
-      "open_roles": ["Head of Data / Chief Data Officer"]
+      "tags": [
+        "repeat-client",
+        "payments",
+        "series-c",
+        "high-value-account"
+      ],
+      "open_roles": [
+        "Head of Data / Chief Data Officer"
+      ]
     },
     {
       "id": "CO03",
@@ -312,8 +415,16 @@
       "created_at": "2026-04-15T10:30:00Z",
       "last_activity_at": "2026-09-20T11:15:00Z",
       "deal_count": 2,
-      "tags": ["b2b-saas", "series-d", "multi-role", "expansion-opportunity"],
-      "open_roles": ["VP of Engineering", "VP of Platform"]
+      "tags": [
+        "b2b-saas",
+        "series-d",
+        "multi-role",
+        "expansion-opportunity"
+      ],
+      "open_roles": [
+        "VP of Engineering",
+        "VP of Platform"
+      ]
     },
     {
       "id": "CO04",
@@ -331,8 +442,17 @@
       "created_at": "2026-06-10T11:00:00Z",
       "last_activity_at": "2026-09-21T10:00:00Z",
       "deal_count": 2,
-      "tags": ["enterprise-security", "public-company", "inbound", "ciso-search", "expansion"],
-      "open_roles": ["CISO", "VP of Security"]
+      "tags": [
+        "enterprise-security",
+        "public-company",
+        "inbound",
+        "ciso-search",
+        "expansion"
+      ],
+      "open_roles": [
+        "CISO",
+        "VP of Security"
+      ]
     },
     {
       "id": "CO05",
@@ -350,8 +470,16 @@
       "created_at": "2026-07-03T09:15:00Z",
       "last_activity_at": "2026-09-19T13:45:00Z",
       "deal_count": 1,
-      "tags": ["healthtech", "series-d", "alumni-network", "warm-lead", "engineering-search"],
-      "open_roles": ["VP of Engineering"]
+      "tags": [
+        "healthtech",
+        "series-d",
+        "alumni-network",
+        "warm-lead",
+        "engineering-search"
+      ],
+      "open_roles": [
+        "VP of Engineering"
+      ]
     },
     {
       "id": "CO06",
@@ -369,8 +497,17 @@
       "created_at": "2026-09-05T10:00:00Z",
       "last_activity_at": "2026-09-12T09:00:00Z",
       "deal_count": 0,
-      "tags": ["pe-backed", "ecommerce", "leadership-rebuild", "early-stage-lead", "crestwood-portfolio"],
-      "open_roles": ["CTO", "VP of Product"]
+      "tags": [
+        "pe-backed",
+        "ecommerce",
+        "leadership-rebuild",
+        "early-stage-lead",
+        "crestwood-portfolio"
+      ],
+      "open_roles": [
+        "CTO",
+        "VP of Product"
+      ]
     },
     {
       "id": "CO07",
@@ -388,8 +525,17 @@
       "created_at": "2026-08-14T14:00:00Z",
       "last_activity_at": "2026-09-10T10:30:00Z",
       "deal_count": 0,
-      "tags": ["cloud-infrastructure", "series-b", "post-funding", "linkedin-outbound", "new-logo"],
-      "open_roles": ["VP of Engineering", "Head of Platform"]
+      "tags": [
+        "cloud-infrastructure",
+        "series-b",
+        "post-funding",
+        "linkedin-outbound",
+        "new-logo"
+      ],
+      "open_roles": [
+        "VP of Engineering",
+        "Head of Platform"
+      ]
     },
     {
       "id": "CO08",
@@ -407,8 +553,16 @@
       "created_at": "2026-05-20T13:00:00Z",
       "last_activity_at": "2026-09-17T16:00:00Z",
       "deal_count": 1,
-      "tags": ["pe-firm", "portfolio-ops", "strategic-account", "multi-company-potential"],
-      "open_roles": ["CTO (portfolio co — TBD)", "VP Engineering (portfolio co — TBD)"]
+      "tags": [
+        "pe-firm",
+        "portfolio-ops",
+        "strategic-account",
+        "multi-company-potential"
+      ],
+      "open_roles": [
+        "CTO (portfolio co — TBD)",
+        "VP Engineering (portfolio co — TBD)"
+      ]
     },
     {
       "id": "CO09",
@@ -426,7 +580,13 @@
       "created_at": "2025-09-14T10:00:00Z",
       "last_activity_at": "2026-07-30T11:00:00Z",
       "deal_count": 1,
-      "tags": ["crypto", "web3", "series-b", "closed-won", "placed-vp-engineering"],
+      "tags": [
+        "crypto",
+        "web3",
+        "series-b",
+        "closed-won",
+        "placed-vp-engineering"
+      ],
       "open_roles": []
     },
     {
@@ -445,11 +605,16 @@
       "created_at": "2025-06-20T09:00:00Z",
       "last_activity_at": "2026-05-10T14:00:00Z",
       "deal_count": 1,
-      "tags": ["b2b-saas", "series-c", "closed-won", "placed-cto", "past-client"],
+      "tags": [
+        "b2b-saas",
+        "series-c",
+        "closed-won",
+        "placed-cto",
+        "past-client"
+      ],
       "open_roles": []
     }
   ],
-
   "deals": [
     {
       "id": "DL01",
@@ -464,7 +629,9 @@
       "created_at": "2025-11-10T09:00:00Z",
       "last_activity_at": "2026-03-28T16:00:00Z",
       "deal_type": "new_business",
-      "products": ["CTO Search"],
+      "products": [
+        "CTO Search"
+      ],
       "notes": "Placed Dr. Lena Park as CTO. Search completed in 72 days. Candidate sourced through our proprietary AI executive network. Client satisfaction score 9.5/10. Triggered repeat engagement for Head of AI/ML search."
     },
     {
@@ -480,7 +647,9 @@
       "created_at": "2026-01-15T10:00:00Z",
       "last_activity_at": "2026-04-15T17:00:00Z",
       "deal_type": "new_business",
-      "products": ["VP Engineering Search"],
+      "products": [
+        "VP Engineering Search"
+      ],
       "notes": "Placed Marcus Chen as VP Engineering after 78-day search. Compensation: $420K total. Fee: 33% of base salary component. Marcus Delgado highly satisfied; renewed for Head of Data search immediately. NovaPay is now a key reference account."
     },
     {
@@ -496,7 +665,9 @@
       "created_at": "2025-10-08T09:00:00Z",
       "last_activity_at": "2026-05-02T15:30:00Z",
       "deal_type": "new_business",
-      "products": ["CTO Search"],
+      "products": [
+        "CTO Search"
+      ],
       "notes": "Placed Jennifer Woo as CTO at PulseGrid. 88-day search. Comp: $390K total; fee at 31%. PulseGrid was referred by a board member. Good outcome, though search ran longer than avg due to candidate counter-offer situation."
     },
     {
@@ -512,7 +683,9 @@
       "created_at": "2026-03-22T10:00:00Z",
       "last_activity_at": "2026-07-30T11:00:00Z",
       "deal_type": "new_business",
-      "products": ["VP Engineering Search"],
+      "products": [
+        "VP Engineering Search"
+      ],
       "notes": "Search closed lost — Chainvault promoted an internal candidate after 90 days in market. Retainer partially refunded per contract terms. Relationship maintained; CEO acknowledged we surfaced strong external candidates. May re-engage for Head of Platform in 2027."
     },
     {
@@ -528,7 +701,9 @@
       "created_at": "2026-06-18T11:00:00Z",
       "last_activity_at": "2026-09-21T10:00:00Z",
       "deal_type": "new_business",
-      "products": ["CISO Search"],
+      "products": [
+        "CISO Search"
+      ],
       "notes": "Finalist stage — Darnell Hutchins (CT11) is primary candidate, second finalist is an internal referral. CEO Derek Osei prefers Hutchins. Reference checks in progress. Expecting offer to go out by Oct 3. Fee based on $450K total comp package."
     },
     {
@@ -544,7 +719,9 @@
       "created_at": "2026-07-15T09:00:00Z",
       "last_activity_at": "2026-09-19T14:30:00Z",
       "deal_type": "expansion",
-      "products": ["VP Security Search"],
+      "products": [
+        "VP Security Search"
+      ],
       "notes": "Expansion deal added after CISO search retainer signed. Actively interviewing candidates. 8 candidates in first-round phone screens; 3 advancing to VP-level panel interviews. Target close date Nov 30. Comp budget $360K total."
     },
     {
@@ -560,7 +737,9 @@
       "created_at": "2026-07-01T09:00:00Z",
       "last_activity_at": "2026-09-22T09:30:00Z",
       "deal_type": "repeat_client",
-      "products": ["Head of AI/ML Search"],
+      "products": [
+        "Head of AI/ML Search"
+      ],
       "notes": "Repeat engagement. Sonia Patel (CT12) is leading candidate following strong first-round interviews on 9/19. Two additional candidates advancing. Jordan Whitfield very engaged — provided rapid feedback within 24 hrs. Expecting finalist presentations week of Oct 6."
     },
     {
@@ -576,7 +755,9 @@
       "created_at": "2026-07-20T10:00:00Z",
       "last_activity_at": "2026-09-18T14:00:00Z",
       "deal_type": "repeat_client",
-      "products": ["Head of Data Search"],
+      "products": [
+        "Head of Data Search"
+      ],
       "notes": "Second engagement with NovaPay. Building candidate slate for Head of Data / CDO. Looking for someone who can build out a 25-person data org. Sourcing from top fintech and payments companies. 12 candidates in pipeline; presenting first slate to Marcus Delgado week of Sep 29."
     },
     {
@@ -592,7 +773,9 @@
       "created_at": "2026-08-05T09:00:00Z",
       "last_activity_at": "2026-09-20T11:15:00Z",
       "deal_type": "new_business",
-      "products": ["VP Engineering Search"],
+      "products": [
+        "VP Engineering Search"
+      ],
       "notes": "Proposal sent 9/12 for $138K retained search fee (33% of $420K comp). MSA under legal review. Priya Ramanathan is champion but CEO needs to co-sign retainer. Call scheduled Oct 1 to advance. Raymond Kowalski (CT10) is pre-identified as top candidate once search kicks off."
     },
     {
@@ -608,7 +791,9 @@
       "created_at": "2026-08-05T09:00:00Z",
       "last_activity_at": "2026-09-20T11:15:00Z",
       "deal_type": "expansion",
-      "products": ["VP Platform Search"],
+      "products": [
+        "VP Platform Search"
+      ],
       "notes": "Bundled with DL09 — expansion deal added after initial VP Engineering discussion. Combined proposal value $260K. Yuki Tanaka (CT14) is pre-identified as strong VP Platform candidate. If MSA closes, both searches launch simultaneously."
     },
     {
@@ -624,7 +809,9 @@
       "created_at": "2026-08-20T09:00:00Z",
       "last_activity_at": "2026-09-19T13:45:00Z",
       "deal_type": "new_business",
-      "products": ["VP Engineering Search"],
+      "products": [
+        "VP Engineering Search"
+      ],
       "notes": "Retainer signed Sep 8; kickoff call completed Sep 15. Amara Okafor (CT15) and Raymond Kowalski (CT10) both identified as strong candidates. Search formally launched — building out candidate pipeline. Alicia Brennan (VP Talent) is responsive and fast. Target first slate presentation: Oct 10."
     },
     {
@@ -640,11 +827,12 @@
       "created_at": "2026-09-17T16:00:00Z",
       "last_activity_at": "2026-09-17T16:00:00Z",
       "deal_type": "new_business",
-      "products": ["CTO Search"],
+      "products": [
+        "CTO Search"
+      ],
       "notes": "Discovery stage — Camille Fontaine at Meridian is evaluating Riviera as preferred vendor for portfolio-wide tech leadership searches. This initial deal is for a CTO search at one of their SaaS portfolio companies. Preferred-vendor framework proposal being drafted. Could be a $500K+ annual relationship."
     }
   ],
-
   "sequences": [
     {
       "id": "SQ01",
@@ -660,7 +848,13 @@
       "click_rate_pct": 9.8,
       "created_at": "2026-02-10T09:00:00Z",
       "description": "Targeted outreach to CEOs at Series B and C funded startups who have recently raised and need their first or second senior technology executive. Messaging centers on the cost of a bad hire vs. the ROI of a retained search. Includes a comp benchmarking data hook.",
-      "tags": ["ceo-outreach", "series-b", "series-c", "new-business", "top-funnel"]
+      "tags": [
+        "ceo-outreach",
+        "series-b",
+        "series-c",
+        "new-business",
+        "top-funnel"
+      ]
     },
     {
       "id": "SQ02",
@@ -676,7 +870,13 @@
       "click_rate_pct": 12.6,
       "created_at": "2026-03-01T10:00:00Z",
       "description": "Long-form nurture sequence targeting HR leaders at growth-stage companies (200-1500 employees). Provides value through salary benchmarks, diversity in tech leadership data, and hiring timeline guidance. Positions Riviera as a strategic partner, not a transactional recruiter. Highest quality MQL source.",
-      "tags": ["chro", "vp-talent", "nurture", "thought-leadership", "mid-funnel"]
+      "tags": [
+        "chro",
+        "vp-talent",
+        "nurture",
+        "thought-leadership",
+        "mid-funnel"
+      ]
     },
     {
       "id": "SQ03",
@@ -692,7 +892,12 @@
       "click_rate_pct": 21.3,
       "created_at": "2026-01-15T09:00:00Z",
       "description": "Warm re-engagement sequence for past clients 90-180 days post-placement. Celebrates placement success, shares market updates, and opens the door for next search. Highest reply rate in our sequence portfolio — these are warm relationships. Often triggers repeat business within 30 days of enrollment.",
-      "tags": ["repeat-client", "warm-outreach", "retention", "high-reply-rate"]
+      "tags": [
+        "repeat-client",
+        "warm-outreach",
+        "retention",
+        "high-reply-rate"
+      ]
     },
     {
       "id": "SQ04",
@@ -708,7 +913,13 @@
       "click_rate_pct": 16.4,
       "created_at": "2026-04-01T10:00:00Z",
       "description": "Thought leadership sequence for both client and candidate contacts. Distributes quarterly compensation reports, CTO/VP hiring trend data, and AI's impact on engineering team structures. Builds Riviera's brand as a market intelligence source. High click-through on comp reports. Generates inbound leads from forwarded emails.",
-      "tags": ["thought-leadership", "market-data", "comp-report", "brand-building", "broad-audience"]
+      "tags": [
+        "thought-leadership",
+        "market-data",
+        "comp-report",
+        "brand-building",
+        "broad-audience"
+      ]
     },
     {
       "id": "SQ05",
@@ -724,10 +935,15 @@
       "click_rate_pct": 14.2,
       "created_at": "2026-05-10T09:00:00Z",
       "description": "Targeted outreach to VP Portfolio Operations and Operating Partners at private equity firms. Messaging focuses on the value of a preferred-vendor arrangement for tech leadership searches across the portfolio — including volume pricing, consistent process, and portfolio-wide benchmarking data. Meridian Capital (CT04) is a direct result of this sequence.",
-      "tags": ["pe-firm", "portfolio-ops", "strategic-accounts", "volume-deal", "outbound"]
+      "tags": [
+        "pe-firm",
+        "portfolio-ops",
+        "strategic-accounts",
+        "volume-deal",
+        "outbound"
+      ]
     }
   ],
-
   "sequence_enrollments": [
     {
       "id": "SE01",
@@ -886,7 +1102,6 @@
       "notes": "Enrolled in CHRO nurture as secondary sequence. Opened first email on 9/11. Intro call scheduled for Sep 30 via direct outreach."
     }
   ],
-
   "marketing_analytics": [
     {
       "id": "MA01",
@@ -1149,7 +1364,6 @@
       "bounce_rate_pct": 26.8
     }
   ],
-
   "email_campaigns": [
     {
       "id": "EC01",
@@ -1185,7 +1399,7 @@
     },
     {
       "id": "EC03",
-      "name": "Riviera Partners Placement Alumni Network",
+      "name": "Summit Search Partners Placement Alumni Network",
       "type": "relationship",
       "status": "sent",
       "sent_at": "2026-09-02T09:00:00Z",
@@ -1265,7 +1479,7 @@
     },
     {
       "id": "EC08",
-      "name": "Riviera Partners — Q4 Search Capacity Opening",
+      "name": "Summit Search Partners — Q4 Search Capacity Opening",
       "type": "sales_outreach",
       "status": "scheduled",
       "sent_at": "2026-10-01T10:00:00Z",
@@ -1280,7 +1494,6 @@
       "segment": "SQLs and Opportunities — Not Yet in Active Search"
     }
   ],
-
   "forms": [
     {
       "id": "FM01",
@@ -1327,7 +1540,6 @@
       "top_traffic_source": "linkedin_outbound"
     }
   ],
-
   "pipeline_summary": {
     "period": "2026-09-24",
     "total_pipeline_value_usd": 1807000,
