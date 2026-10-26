@@ -33,9 +33,10 @@ mcp = FastMCP(
     name="hubspot-mock",
     version="1.0.0",
     instructions=(
-        "Mock HubSpot CRM for Quince B2B sales and marketing. Query contacts, companies, "
-        "deals, sales sequences, sequence enrollments, marketing analytics, email campaigns, "
-        "and pipeline summary."
+        "Mock HubSpot CRM for FarmSense, an agricultural technology company that develops "
+        "smart IoT monitoring systems for livestock farms — primarily swine and poultry producers. "
+        "Query contacts, companies, deals, sales sequences, sequence enrollments, marketing "
+        "analytics, email campaigns, and pipeline summary."
     ),
 )
 
